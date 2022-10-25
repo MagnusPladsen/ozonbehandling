@@ -22,7 +22,7 @@ const Home: NextPage = () => {
       <NavBar />
       <Hero />
       <How />
-      <BulletInfo />
+      
     </div>
   );
 };
