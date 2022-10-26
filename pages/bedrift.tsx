@@ -1,9 +1,14 @@
+import Head from "next/head";
 import React from "react";
+import UnderConstruction from "../components/underConstruction/UnderConstruction.component";
 
-export default function Company () {
+export default function Company() {
   return (
     <>
-      <h1>Hello World</h1>
+      <Head>
+        <title>OzonMaskinen - Bedrift</title>
+      </Head>
+      <UnderConstruction />
     </>
   );
-};
+}
