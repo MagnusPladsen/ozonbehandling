@@ -2,17 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .hero {
-    background-image: url("../public/images/hero.png");
-    height: 40vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    align-items: center;
-    justify-content: center;
-    /* -webkit-filter: brightness(110%);  */ 
-    @apply lg:h-[60vh]
+  background-image: url("../public/images/hero.png");
+  height: 40vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  /* -webkit-filter: brightness(110%);  */
+  @apply lg:h-[60vh];
+}
+
+input,
+textarea {
+  @apply border-2 border-gray-300 bg-white h-10 px-2 pr-40 rounded text-sm focus:outline-none;
 }
 
 
-      
+label {
+  @apply block text-gray-700 text-sm font-bold mb-2;
+}
+

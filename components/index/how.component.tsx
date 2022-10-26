@@ -4,9 +4,9 @@ import BulletInfo from "./BulletInfo.component";
 
 
 export default function How() {
-  const paragraphStyling = "font-text pt-5 w-[80vw] 2xl:w-[40vw] text-lg mx-auto";
+  const paragraphStyling = "font-text pt-5 text-lg";
   return (
-    <div className="pt-10 pb-10 ">
+    <div className="">
       <h2 className="font-header font-extrabold text-2xl text-center lg:py-8 lg:text-3xl">
         Hvordan?
       </h2>

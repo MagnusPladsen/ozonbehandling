@@ -15,5 +15,5 @@ module.exports = {
       text: "Nunito",
     },
   },
-  /*  plugins: [require("@tailwindcss/forms")], */
+  plugins: [/* require("@tailwindcss/forms") */],
 };

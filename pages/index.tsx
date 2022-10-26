@@ -5,6 +5,7 @@ import Hero from "../components/hero/Hero.component";
 import BulletInfo from "../components/index/BulletInfo.component";
 import How from "../components/index/how.component";
 import NavBar from "../components/navigation/NavBar.component";
+import SiteWrapper from "../components/siteWrapper/SiteWrapper.componen";
 
 const Home: NextPage = () => {
   return (
@@ -21,8 +22,9 @@ const Home: NextPage = () => {
       </Head>
       <NavBar />
       <Hero />
-      <How />
-      
+      <SiteWrapper>
+        <How />
+      </SiteWrapper>
     </div>
   );
 };

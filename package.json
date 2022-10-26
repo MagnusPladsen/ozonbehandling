@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@formspree/react": "^2.4.0",
     "framer-motion": "^7.6.1",
     "next": "latest",
     "react": "18.2.0",

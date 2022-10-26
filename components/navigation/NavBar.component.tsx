@@ -10,7 +10,7 @@ export default function NavBar() {
   return (
     <>
       <div className="w-full fixed bg-primary h-[70px] font-header px-[20px] pt-4 drop-shadow-sm lg:flex justify-between z-20">
-        <div className="flex justify-between opacity-100 lg:justify-start lg:gap-8 lg:pl-4">
+        <div className="flex justify-between lg:justify-start lg:gap-8 lg:pl-4">
           <div className="">
             <Image
               src="/favicon.svg"
@@ -32,12 +32,13 @@ export default function NavBar() {
             />
           </div>
         </div>
+
               {/* DESKTOP NAV MENU */}
       <div className="hidden z-10 lg:flex justify-between pr-7">
         <div className="mx-auto text-center text-white font-header text-lg font-bold flex flex-row gap-14 pt-2">
           <Link href="/">
             <p
-              className={` ${
+              className={`opacity-100 ${
                 router.pathname === "/" ? active : "opacity-50"
               }`}
             >
@@ -46,7 +47,7 @@ export default function NavBar() {
           </Link>
           <Link href="/bedrift">
             <p
-              className={` opacity-70 ${
+              className={` opacity-100 ${
                 router.pathname === "/bedrift" ? active : "opacity-50"
               }`}
             >
@@ -55,7 +56,7 @@ export default function NavBar() {
           </Link>
           <Link href="/kontakt">
             <p
-              className={` opacity-70 ${
+              className={` opacity-100 ${
                 router.pathname === "/kontakt" ? active : "opacity-50"
               }`}
             >
@@ -64,7 +65,7 @@ export default function NavBar() {
           </Link>
           <Link href="/om-oss">
             <p
-              className={` opacity-70 ${
+              className={`opacity-100 ${
                 router.pathname === "/om-oss" ? active : "opacity-50"
               }`}
             >

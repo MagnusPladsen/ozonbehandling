@@ -12,16 +12,18 @@ export default function DefaultButton({
   return (
     <>
       <Link href="/kontakt">
-        <motion.div
+        <motion.button
           whileHover={{
             scale: 1.1,
+            transition: { duration: 0.2 },
+            color: "#06283D",
+            backgroundColor: "#fff",
+            border: "1px solid #06283D",
           }}
-          className=""
+          className="hover:cursor-pointer py-4 px-10 rounded bg-primary font-bold text-white "
         >
-          <a className="hover:cursor-pointer py-4 px-10 rounded bg-primary font-bold text-white ">
-            {text}
-          </a>
-        </motion.div>
+          {text}
+        </motion.button>
       </Link>
     </>
   );
