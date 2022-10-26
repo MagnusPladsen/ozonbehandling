@@ -16,9 +16,9 @@ export default function DefaultButton({
           whileHover={{
             scale: 1.1,
           }}
-          className="hover:cursor-pointer"
+          className=""
         >
-          <a className=" py-4 px-10 rounded bg-primary font-bold text-white ">
+          <a className="hover:cursor-pointer py-4 px-10 rounded bg-primary font-bold text-white ">
             {text}
           </a>
         </motion.div>
