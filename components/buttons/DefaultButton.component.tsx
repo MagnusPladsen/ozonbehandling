@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
 
@@ -11,7 +12,16 @@ export default function DefaultButton({
   return (
     <>
       <Link href="/kontakt">
-        <a className="py-4 px-10 rounded bg-primary font-bold text-white ">{text}</a>
+        <motion.div
+          whileHover={{
+            scale: 1.1,
+          }}
+          className="hover:cursor-pointer"
+        >
+          <a className=" py-4 px-10 rounded bg-primary font-bold text-white ">
+            {text}
+          </a>
+        </motion.div>
       </Link>
     </>
   );

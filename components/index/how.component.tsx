@@ -2,11 +2,12 @@ import React from "react";
 import DefaultButton from "../buttons/DefaultButton.component";
 import BulletInfo from "./BulletInfo.component";
 
+
 export default function How() {
-  const paragraphStyling = "font-text pt-5 w-[80vw] text-lg mx-auto";
+  const paragraphStyling = "font-text pt-5 w-[80vw] 2xl:w-[60vw] text-lg mx-auto";
   return (
-    <div className="pt-10 pb-10">
-      <h2 className="font-header font-extrabold text-2xl text-center">
+    <div className="pt-10 pb-10 ">
+      <h2 className="font-header font-extrabold text-2xl text-center lg:py-8 lg:text-3xl">
         Hvordan?
       </h2>
       <div className="">
@@ -23,14 +24,14 @@ export default function How() {
           kjøretøy.
         </p>
         <BulletInfo />
-        <div className="w-[80vw] mx-auto text-center py-10">
+        <div className="w-[80vw] mx-auto text-center py-28">
           <p className="font-text font-bold pb-10 text-lg mx-auto">
             Ta kontakt så finner vi en løsning tilpasset deg og dine behov!
           </p>
           <DefaultButton text="Kontakt oss" onClick={() => {}} />
         </div>
       </div>
-      <p className="font-text pt-20 w-[80vw] font-light text-sm mx-auto">
+      <p className="font-text pt-20 w-[80vw] 2xl:w-[60vw] font-light text-sm mx-auto">
         *Tilbudet gjelder 1 gratis demo hos overnattingssteder, større
         utleievirksomheter og kjøretøyforhandlere
       </p>

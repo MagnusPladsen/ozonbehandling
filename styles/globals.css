@@ -11,5 +11,8 @@
     align-items: center;
     justify-content: center;
     /* -webkit-filter: brightness(110%);  */ 
+    @apply lg:h-[60vh]
 }
+
+
       
