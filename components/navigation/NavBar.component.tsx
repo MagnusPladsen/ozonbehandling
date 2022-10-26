@@ -9,8 +9,8 @@ export default function NavBar() {
   const active = "underline underline-offset-8";
   return (
     <>
-      <div className="w-full fixed bg-primary h-[70px] font-header px-[20px] 2xl:px-20 pt-4 drop-shadow-sm lg:flex justify-between  z-20">
-        <div className="flex  justify-between opacity-100 lg:justify-start lg:gap-8 lg:pl-4">
+      <div className="w-full fixed bg-primary h-[70px] font-header px-[20px] pt-4 drop-shadow-sm lg:flex justify-between z-20">
+        <div className="flex justify-between opacity-100 lg:justify-start lg:gap-8 lg:pl-4">
           <div className="">
             <Image
               src="/favicon.svg"
