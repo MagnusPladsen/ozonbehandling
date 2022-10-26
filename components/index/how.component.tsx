@@ -4,7 +4,7 @@ import BulletInfo from "./BulletInfo.component";
 
 
 export default function How() {
-  const paragraphStyling = "font-text pt-5 w-[80vw] 2xl:w-[60vw] text-lg mx-auto";
+  const paragraphStyling = "font-text pt-5 w-[80vw] 2xl:w-[40vw] text-lg mx-auto";
   return (
     <div className="pt-10 pb-10 ">
       <h2 className="font-header font-extrabold text-2xl text-center lg:py-8 lg:text-3xl">
@@ -31,7 +31,7 @@ export default function How() {
           <DefaultButton text="Kontakt oss" onClick={() => {}} />
         </div>
       </div>
-      <p className="font-text pt-20 w-[80vw] 2xl:w-[60vw] font-light text-sm mx-auto">
+      <p className="font-text pt-20 w-[80vw] 2xl:w-[40vw] font-light text-sm mx-auto">
         *Tilbudet gjelder 1 gratis demo hos overnattingssteder, større
         utleievirksomheter og kjøretøyforhandlere
       </p>

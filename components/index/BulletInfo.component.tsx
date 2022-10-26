@@ -4,7 +4,7 @@ import CheckMarkIcon from "/public/images/icons/checkMark.png";
 
 export default function BulletInfo() {
   return (
-    <div className=" pb-10 w-[80vw] 2xl:w-[60vw] mx-auto pt-10">
+    <div className=" pb-10 w-[80vw] 2xl:w-[40vw] mx-auto pt-10">
       {/* <h2 className="font-header font-extrabold text-2xl text-center pb-5">
         Informasjon
       </h2> */}

@@ -8,8 +8,8 @@ export default function Hero() {
   return (
     <div className="w-full pt-[70px]">
       <div className="hero">
-        <div className="flex-row pl-6 lg:pl-10 2xl:pl-20">
-          <div className="text-3xl lg:text-5xl 2xl:text-7xl pt-6 lg:pt-32 pb-[22vh] 2xl:pb-15vh] lg:pb-[5vh] lg:w-[50vw] ">
+        <div className="flex-row pl-6 lg:pl-28 ">
+          <div className="text-3xl lg:text-5xl 2xl:text-7xl pt-6 lg:pt-32 pb-[22vh] 2xl:pb-[15vh] lg:pb-[5vh] lg:w-[50vw] ">
             <span className={spanStyle}>VOND LUKT</span> fra bolig, hotellrom
             eller kjøretøy?
           </div>
