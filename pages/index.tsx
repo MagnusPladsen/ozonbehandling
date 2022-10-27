@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import Footer from "../components/footer/Footer.component";
 import Hero from "../components/hero/Hero.component";
 import BulletInfo from "../components/index/BulletInfo.component";
 import How from "../components/index/how.component";
@@ -25,6 +26,7 @@ const Home: NextPage = () => {
       <SiteWrapper>
         <How />
       </SiteWrapper>
+      <Footer />
     </div>
   );
 };

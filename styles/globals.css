@@ -15,9 +15,30 @@
   @apply lg:h-[60vh];
 }
 
+.company-hero {
+  background-image: url("../public/images/company-hero.jpg");
+  height: 40vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  /* -webkit-filter: brightness(110%);  */
+  @apply lg:h-[60vh];
+}
+
+iframe {
+  border-radius: 4px;
+  
+}
+
 input,
 textarea {
-  @apply border-2 border-gray-300 bg-white h-10 px-2 pr-40 rounded text-sm focus:outline-none;
+  @apply border-2 border-gray-300 w-[80vw] md:w-[60vw] lg:w-[30vw] bg-white h-10 px-2 pr-40 rounded text-sm focus:outline-none;
+}
+
+textarea {
+  @apply h-32 w-full pt-2
 }
 
 

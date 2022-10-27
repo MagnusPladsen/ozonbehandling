@@ -1,6 +1,11 @@
 import Head from "next/head";
 import React from "react";
+import NavBar from "../components/navigation/NavBar.component";
+import SiteWrapper from "../components/siteWrapper/SiteWrapper.componen";
 import UnderConstruction from "../components/underConstruction/UnderConstruction.component";
+import CompanyComponent from "../components/company/Company.component";
+import CompanyHero from "../components/company/CompanyHero.component";
+import Footer from "../components/footer/Footer.component";
 
 export default function Company() {
   return (
@@ -14,8 +19,12 @@ export default function Company() {
           rel="stylesheet"
         />
       </Head>
-      <UnderConstruction />
-
+      <NavBar />
+      <CompanyHero />
+      <SiteWrapper>
+        <CompanyComponent />
+      </SiteWrapper>
+      <Footer />
     </>
   );
 }

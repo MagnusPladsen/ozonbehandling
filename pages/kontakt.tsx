@@ -1,9 +1,10 @@
 import React from "react";
 import Head from "next/head";
 import UnderConstruction from "../components/underConstruction/UnderConstruction.component";
-import ContactForm from "../components/company/ContactForm.componen";
+import ContactForm from "../components/contact/ContactForm.componen";
 import NavBar from "../components/navigation/NavBar.component";
 import SiteWrapper from "../components/siteWrapper/SiteWrapper.componen";
+import Footer from "../components/footer/Footer.component";
 
 export default function Contact() {
   return (
@@ -17,11 +18,11 @@ export default function Contact() {
           rel="stylesheet"
         />
       </Head>
-      {/* <UnderConstruction /> */}
       <NavBar />
       <SiteWrapper>
         <ContactForm />
       </SiteWrapper>
+      <Footer />
     </>
   );
 }
