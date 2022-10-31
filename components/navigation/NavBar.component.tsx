@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
-  const active = "underline underline-offset-8";
+  const active = "underline underline-offset-8 opacity-100";
   return (
     <>
       <div className="w-full fixed bg-primary h-[70px] font-header px-[20px] pt-4 drop-shadow-sm lg:flex justify-between z-20">
@@ -113,25 +113,25 @@ export default function NavBar() {
               <Link href="/">
                 <p
                   className={`py-10 ${
-                    router.pathname === "/" ? active : "opacity-70"
+                    router.pathname === "/" ? active : "opacity-50"
                   }`}
                 >
                   Hjem
                 </p>
               </Link>
               <Link href="/bedrift">
-                <p
-                  className={`py-10 opacity-70 ${
-                    router.pathname === "/bedrift" ? active : "opacity-70"
+                <div
+                  className={`py-10  ${
+                    router.pathname === "/bedrift" ? active : "opacity-50"
                   }`}
                 >
                   Bedrift
-                </p>
+                </div>
               </Link>
               <Link href="/kontakt">
                 <p
-                  className={`py-10 opacity-70 ${
-                    router.pathname === "/kontakt" ? active : "opacity-70"
+                  className={`py-10 ${
+                    router.pathname === "/kontakt" ? active : "opacity-50"
                   }`}
                 >
                   Kontakt
@@ -139,8 +139,8 @@ export default function NavBar() {
               </Link>
               <Link href="/om-oss">
                 <p
-                  className={`py-10 opacity-70 ${
-                    router.pathname === "/om-oss" ? active : "opacity-70"
+                  className={`py-10 ${
+                    router.pathname === "/om-oss" ? active : "opacity-50"
                   }`}
                 >
                   Om oss

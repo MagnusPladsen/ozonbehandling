@@ -24,7 +24,7 @@ export default function How() {
           kjøretøy.
         </p>
         <BulletInfo />
-        <div className="w-[80vw] 2xl:w-fit mx-auto text-center py-28">
+        <div className="w-[80vw] 2xl:w-fit mx-auto text-center py-14 lg:py-28">
           <p className="font-text font-bold pb-10 text-lg mx-auto">
             Ta kontakt så finner vi en løsning tilpasset deg og dine behov!
           </p>

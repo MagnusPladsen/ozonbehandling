@@ -12,6 +12,7 @@ export default function Company() {
     <>
       <Head>
         <title>OzonMaskinen - Bedrift</title>
+        <link rel="icon" href="/favicon.svg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
