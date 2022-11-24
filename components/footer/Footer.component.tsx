@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="bg-primary py-20 text-white font-header flex lg:flex-row flex-col gap-6 lg:gap-0 justify-around 2xl:px-60">
-      <div className=" mx-auto">
+    <div className="bg-primary py-20 text-white font-header flex lg:flex-row flex-col gap-6 lg:gap-0 justify-around">
+      <div className="pb-5 mx-auto">
         <p className="text-xl pb-4">JS Solutions</p>
         <div className="flex gap-4">
           <p className="w-24">Tlf:</p>

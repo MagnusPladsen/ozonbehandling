@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
+html,body { overflow-x: hidden;}
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../public/images/bath-hero.jpg");
   background-repeat: no-repeat;
@@ -10,7 +10,6 @@
   background-position: center;
   align-items: center;
   justify-content: center;
-  /* -webkit-filter: brightness(110%);  */
 }
 
 .company-hero {
@@ -21,7 +20,6 @@
   background-position: center;
   align-items: center;
   justify-content: center;
-  /* -webkit-filter: brightness(110%);  */
   @apply lg:h-[60vh];
 }
 

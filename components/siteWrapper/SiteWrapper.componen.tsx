@@ -1,11 +1,17 @@
 import React from "react";
 
-export default function SiteWrapper ({children} : {children: React.ReactNode}) {
+export default function SiteWrapper({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className: string;
+}) {
   return (
-    <div className="mx-auto w-[60vw] flex flex-col pt-[120px]">
-        {children}
+    <div
+      className={`${className} mx-auto w-[80vw] md:w-[60vw] flex flex-col pt-[120px]`}
+    >
+      {children}
     </div>
   );
 }
-
-

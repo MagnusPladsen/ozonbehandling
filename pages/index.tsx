@@ -1,14 +1,15 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
+import { useState } from "react";
 import Footer from "../components/footer/Footer.component";
 import Hero from "../components/hero/Hero.component";
-import BulletInfo from "../components/index/BulletInfo.component";
 import How from "../components/index/how.component";
 import NavBar from "../components/navigation/NavBar.component";
 import SiteWrapper from "../components/siteWrapper/SiteWrapper.componen";
 
 const Home: NextPage = () => {
+  const [dropdownOpen, setdropdownOpen] = useState(false);
+  const blurIfDropdownOpen = dropdownOpen ? "blur-md" : "";
   return (
     <div className="">
       <Head>
@@ -21,9 +22,9 @@ const Home: NextPage = () => {
           rel="stylesheet"
         />
       </Head>
-      <NavBar />
-      <Hero />
-      <SiteWrapper>
+      <NavBar dropdownOpen={dropdownOpen} setdropdownOpen={setdropdownOpen} />
+      <Hero className={blurIfDropdownOpen} />
+      <SiteWrapper className={blurIfDropdownOpen} >
         <How />
       </SiteWrapper>
       <Footer />
