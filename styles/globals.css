@@ -4,15 +4,13 @@
 
 
 .hero {
-  background-image: url("../public/images/hero.png");
-  height: 40vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../public/images/bath-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   align-items: center;
   justify-content: center;
   /* -webkit-filter: brightness(110%);  */
-  @apply lg:h-[60vh];
 }
 
 .company-hero {

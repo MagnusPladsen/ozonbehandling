@@ -4,13 +4,10 @@ import CheckMarkIcon from "/public/images/icons/checkMark.png";
 
 export default function BulletInfo() {
   return (
-    <div className="py-10">
-      {/* <h2 className="font-header font-extrabold text-2xl text-center pb-5">
-        Informasjon
-      </h2> */}
+    <div className="py-16">
       <div className="flex flex-col gap-8 content-center">
-        <div className="">
-          <div className="inline pr-2">
+        <div className="flex gap-5 align-center">
+          <div className="">
             <Image
               src={CheckMarkIcon}
               alt="Checkmark icon"
@@ -18,13 +15,11 @@ export default function BulletInfo() {
               height={30}
             />
           </div>
-          <p className="inline">
-            Vi tar oss av tilkoblingen, sikkert og trygt
-          </p>
+          <p className="">Vi tar oss av tilkoblingen, sikkert og trygt</p>
         </div>
 
-        <div className="">
-          <div className="inline pr-2">
+        <div className="flex gap-5 align-center">
+          <div className="">
             <Image
               src={CheckMarkIcon}
               alt="Checkmark icon"
@@ -33,7 +28,7 @@ export default function BulletInfo() {
             />
           </div>
 
-          <p className="inline">
+          <p className="">
             Vi sørger for at ozonen blir utluftet i henhold til
             miljødirektoratets retningslinjer.
           </p>

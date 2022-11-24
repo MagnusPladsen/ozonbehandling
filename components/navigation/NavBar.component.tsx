@@ -10,21 +10,21 @@ export default function NavBar() {
   const active = "underline underline-offset-8 opacity-100";
   return (
     <>
-      <div className="w-full fixed bg-primary h-[70px] font-header px-[20px] pt-4 drop-shadow-sm lg:flex justify-between z-20">
+      <div className="w-full absolute pt-[60px] font-header px-[80px] lg:flex justify-between z-20">
         <div
-          className="flex justify-between lg:justify-start lg:gap-4 lg:pl-8"
+          className="flex justify-between lg:justify-start items-center lg:gap-10"
         >
-          <div className="">
+          <Link href="/">
             <Image
               src="/favicon.svg"
               alt="OzonMaskinen"
-              width={35}
-              height={35}
+              width={75}
+              height={75}
             />
-          </div>
+          </Link>
           <Link href="/">
             <h1
-              className="text-white text-3xl hover:cursor-pointer "
+              className="text-white text-4xl hover:cursor-pointer "
             >
               OzonMaskinen
             </h1>
@@ -43,17 +43,16 @@ export default function NavBar() {
         </div>
 
         {/* DESKTOP NAV MENU */}
-        <div className="hidden z-10 lg:flex justify-between pr-7">
-          <div className="mx-auto text-center text-white font-header text-lg font-bold flex flex-row gap-14 pt-2">
+        <div className="hidden z-10 lg:flex justify-between pt-[25px]">
+          <div className="mx-auto text-center text-white font-header text-lg font-bold flex flex-row gap-[80px]">
             <Link href="/">
               <motion.p
                 whileHover={{
                   scale: 1.1,
-                  opacity: 1,
                   transition: { duration: 0.2 },
                 }}
-                className={`opacity-100 hover:cursor-pointer  ${
-                  router.pathname === "/" ? active : "opacity-50"
+                className={`hover:cursor-pointer  ${
+                  router.pathname === "/" ? active : ""
                 }`}
               >
                 Hjem
@@ -63,11 +62,10 @@ export default function NavBar() {
               <motion.p
                 whileHover={{
                   scale: 1.1,
-                  opacity: 1,
                   transition: { duration: 0.2 },
                 }}
-                className={` opacity-100 hover:cursor-pointer ${
-                  router.pathname === "/bedrift" ? active : "opacity-50"
+                className={`hover:cursor-pointer ${
+                  router.pathname === "/bedrift" ? active : ""
                 }`}
               >
                 Bedrift
@@ -77,11 +75,10 @@ export default function NavBar() {
               <motion.p
                 whileHover={{
                   scale: 1.1,
-                  opacity: 1,
                   transition: { duration: 0.2 },
                 }}
-                className={` opacity-100 hover:cursor-pointer ${
-                  router.pathname === "/kontakt" ? active : "opacity-50"
+                className={`hover:cursor-pointer ${
+                  router.pathname === "/kontakt" ? active : ""
                 }`}
               >
                 Kontakt
@@ -91,11 +88,10 @@ export default function NavBar() {
               <motion.p
                 whileHover={{
                   scale: 1.1,
-                  opacity: 1,
                   transition: { duration: 0.2 },
                 }}
-                className={`opacity-100 hover:cursor-pointer ${
-                  router.pathname === "/om-oss" ? active : "opacity-50"
+                className={`hover:cursor-pointer ${
+                  router.pathname === "/om-oss" ? active : ""
                 }`}
               >
                 Om oss
@@ -106,50 +102,6 @@ export default function NavBar() {
       </div>
 
       {/* DROPDOWN */}
-      {isOpen && (
-        <div className="lg:hidden fixed w-screen bg-primary h-full font-header z-10 px-[20px] pt-32">
-          <div className="flex justify-between pb-10">
-            <div className="mx-auto text-center text-white font-header text-xl font-bold">
-              <Link href="/">
-                <p
-                  className={`py-10 ${
-                    router.pathname === "/" ? active : "opacity-50"
-                  }`}
-                >
-                  Hjem
-                </p>
-              </Link>
-              <Link href="/bedrift">
-                <div
-                  className={`py-10  ${
-                    router.pathname === "/bedrift" ? active : "opacity-50"
-                  }`}
-                >
-                  Bedrift
-                </div>
-              </Link>
-              <Link href="/kontakt">
-                <p
-                  className={`py-10 ${
-                    router.pathname === "/kontakt" ? active : "opacity-50"
-                  }`}
-                >
-                  Kontakt
-                </p>
-              </Link>
-              <Link href="/om-oss">
-                <p
-                  className={`py-10 ${
-                    router.pathname === "/om-oss" ? active : "opacity-50"
-                  }`}
-                >
-                  Om oss
-                </p>
-              </Link>
-            </div>
-          </div>
-        </div>
-      )}
     </>
   );
 }

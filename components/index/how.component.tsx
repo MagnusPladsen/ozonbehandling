@@ -2,18 +2,17 @@ import React from "react";
 import DefaultButton from "../buttons/DefaultButton.component";
 import BulletInfo from "./BulletInfo.component";
 
-
 export default function How() {
-  const paragraphStyling = "font-text pt-5 text-lg";
+  const paragraphStyling = "";
   return (
-    <div className="pb-20">
-      <h2 className="font-header font-extrabold text-2xl text-center lg:py-8 lg:text-3xl">
+    <div className="pb-[120px]">
+      <h2 className="font-header font-extrabold text-2xl text-center lg:text-4xl pb-16">
         Hvordan?
       </h2>
-      <div className="">
+      <div className="text-left flex flex-col gap-5 font-text text-lg">
         <p className={paragraphStyling}>
           En <span className="font-bold">ozongenerator</span> dreper all
-          organisk materiale uten bruk av kjemikalier.
+          organisk materiale uten bruk av kjemikalier. 
         </p>
         <p className={paragraphStyling}>
           Derfor er dette den mest effektive metoden for å fjerne blant annet
@@ -24,14 +23,21 @@ export default function How() {
           kjøretøy.
         </p>
         <BulletInfo />
-        <div className="w-[80vw] 2xl:w-fit mx-auto text-center py-14 lg:py-28">
-          <p className="font-text font-bold pb-10 text-lg mx-auto">
+        <div className="py-16 flex flex-col gap-10">
+          <p className="font-text font-bold text-lg text-center">
             Ta kontakt så finner vi en løsning tilpasset deg og dine behov!
           </p>
-          <DefaultButton link="/kontakt" text="Kontakt oss" onClick={() => {}} />
+          <div className="w-fit mx-auto">
+            <DefaultButton
+              link="/kontakt"
+              text="Kontakt oss"
+              onClick={() => {}}
+              className=""
+            />
+          </div>
         </div>
       </div>
-      <p className="font-text pt-20 w-[80vw] 2xl:w-[40vw] font-light text-sm mx-auto">
+      <p className="font-text pt-20 text-center font-light text-sm">
         *Tilbudet gjelder 1 gratis demo hos overnattingssteder, større
         utleievirksomheter og kjøretøyforhandlere
       </p>
