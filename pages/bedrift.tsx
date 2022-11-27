@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "../components/navigation/NavBar.component";
 import SiteWrapper from "../components/siteWrapper/SiteWrapper.componen";
 import UnderConstruction from "../components/underConstruction/UnderConstruction.component";
@@ -8,6 +8,8 @@ import CompanyHero from "../components/company/CompanyHero.component";
 import Footer from "../components/footer/Footer.component";
 
 export default function Company() {
+  const [dropdownOpen, setdropdownOpen] = useState(false);
+  const blurIfDropdownOpen = dropdownOpen ? "blur-md" : "";
   return (
     <>
       <Head>
@@ -20,9 +22,9 @@ export default function Company() {
           rel="stylesheet"
         />
       </Head>
-      <NavBar />
+      <NavBar dropdownOpen={dropdownOpen} setdropdownOpen={setdropdownOpen} />
       <CompanyHero />
-      <SiteWrapper>
+      <SiteWrapper className={blurIfDropdownOpen} >
         <CompanyComponent />
       </SiteWrapper>
       <Footer />

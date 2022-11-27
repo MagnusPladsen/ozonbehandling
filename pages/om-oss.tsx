@@ -1,8 +1,10 @@
 import Head from "next/head";
-import React from "react";
+import React, { useState } from "react";
 import UnderConstruction from "../components/underConstruction/UnderConstruction.component";
 
 export default function About() {
+  const [dropdownOpen, setdropdownOpen] = useState(false);
+  const blurIfDropdownOpen = dropdownOpen ? "blur-md" : "";
   return (
     <>
       <Head>

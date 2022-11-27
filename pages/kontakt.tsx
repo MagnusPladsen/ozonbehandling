@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import UnderConstruction from "../components/underConstruction/UnderConstruction.component";
 import ContactForm from "../components/contact/ContactForm.componen";
@@ -7,6 +7,8 @@ import SiteWrapper from "../components/siteWrapper/SiteWrapper.componen";
 import Footer from "../components/footer/Footer.component";
 
 export default function Contact() {
+  const [dropdownOpen, setdropdownOpen] = useState(false);
+  const blurIfDropdownOpen = dropdownOpen ? "blur-md" : "";
   return (
     <>
       <Head>
@@ -19,8 +21,8 @@ export default function Contact() {
           rel="stylesheet"
         />
       </Head>
-      <NavBar />
-      <SiteWrapper>
+      <NavBar dropdownOpen={dropdownOpen} setdropdownOpen={setdropdownOpen} />
+      <SiteWrapper className={blurIfDropdownOpen} >
         <ContactForm />
       </SiteWrapper>
       <Footer />
