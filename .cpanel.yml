@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/magnumsk/public_html/
+    - /bin/cp R- /magnuspladsen/build/* $DEPLOYPATH
