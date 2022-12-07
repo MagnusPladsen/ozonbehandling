@@ -18,20 +18,24 @@ export default function NavBar({
       <div className="w-full fixed lg:absolute pt-[10vw] lg:pt-[60px] font-header px-[10vw] lg:px-[80px] lg:flex justify-between z-20">
         <div className="flex justify-between lg:justify-start items-center lg:gap-10">
           <Link href="/">
-            <Image
-              src="/favicon.svg"
-              alt="OzonMaskinen"
-              width={75}
-              height={75}
-              className="hidden lg:block"
-            />
-            <Image
-              src="/favicon.svg"
-              alt="OzonMaskinen"
-              width={35}
-              height={35}
-              className="block lg:hidden"
-            />
+            <div className="">
+              <div className="hidden">
+              <Image
+                src="/favicon.svg"
+                alt="OzonMaskinen"
+                width={75}
+                height={75}
+                className=" "
+              />
+              </div>
+              <Image
+                src="/favicon.svg"
+                alt="OzonMaskinen"
+                width={35}
+                height={35}
+                className="block lg:hidden"
+              />
+            </div>
           </Link>
           <Link href="/">
             <h1 className="text-white text-xl lg:text-4xl hover:cursor-pointer ">
@@ -40,7 +44,9 @@ export default function NavBar({
           </Link>
           <div
             className="lg:hidden"
-            onClick={() => (dropdownOpen ? setdropdownOpen(false) : setdropdownOpen(true))}
+            onClick={() =>
+              dropdownOpen ? setdropdownOpen(false) : setdropdownOpen(true)
+            }
           >
             <Image
               src="/images/icons/hamburger.svg"
@@ -112,7 +118,7 @@ export default function NavBar({
 
       {/* DROPDOWN */}
       {dropdownOpen && (
-        <div className="lg:hidden fixed w-screen h-full font-header z-10 px-[20px] pt-32">
+        <div className="lg:hidden bg-primary fixed w-screen h-full font-header z-10 px-[20px] pt-32">
           <div className="flex justify-between pb-10">
             <div className="mx-auto text-center text-white font-header text-xl font-bold">
               <Link href="/">

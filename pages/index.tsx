@@ -9,7 +9,7 @@ import SiteWrapper from "../components/siteWrapper/SiteWrapper.componen";
 
 const Home: NextPage = () => {
   const [dropdownOpen, setdropdownOpen] = useState(false);
-  const blurIfDropdownOpen = dropdownOpen ? "blur-md" : "";
+  const blurIfDropdownOpen = dropdownOpen ? "" : "";
   return (
     <div className="">
       <Head>
