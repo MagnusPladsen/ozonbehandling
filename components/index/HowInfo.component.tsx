@@ -7,18 +7,20 @@ export default function HowInfo() {
       <h2 className="font-header font-extrabold text-center text-4xl pb-16">
         Hvordan?
       </h2>
-      <div className="text-left flex flex-col gap-2 font-text ">
+      <div className="text-left flex flex-col gap-5 font-text text-xl ">
         <p className={paragraphStyling}>
-          En <span className="font-bold">ozongenerator</span> dreper all
-          organisk materiale uten bruk av kjemikalier.
+          En <span className="font-bold">ozongenerator</span> bryter ned all
+          organisk materiale uten bruk av kjemikalier. Dette vil si at kilden til lukten blir molekylert oppløst og brutt ned
+          vil hjelp av ozon.
         </p>
         <p className={paragraphStyling}>
-          Derfor er dette den mest effektive metoden for å fjerne blant annet
-          røyklukt og matlukt.
+          Derfor er dette eneste metoden for permajent fjerning av blant annet
+          røyklukt, matlukt, innestengt lukt etc.
         </p>
         <p className={paragraphStyling}>
-          Prosessen kan gjøres i hotellrom, studentboliger, hytter eller
-          kjøretøy.
+          Kraftig behandling vil i tillegg eliminere skadedyr, bakterier og
+          overflatemugg.
+          Prosessen kan gjennomføres i bolig, utleieenheter og kjøretøy.
         </p>
         <BulletInfo />
       </div>

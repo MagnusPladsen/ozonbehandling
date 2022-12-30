@@ -13,7 +13,7 @@ export default function SiteWrapper({
             return (
               <>
                 <div
-                  className={` mx-auto w-[80vw] md:w-[60vw] flex flex-col pt-[160px]`}
+                  className={` mx-auto w-[80vw] md:w-[60vw] xl:w-[40vw] flex flex-col pt-[160px]`}
                 >
                   {child}
                 </div>

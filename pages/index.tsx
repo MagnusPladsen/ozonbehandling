@@ -8,6 +8,7 @@ import Hero from "../components/index/hero/Hero.component";
 import NavBar from "../components/navigation/NavBar.component";
 import SiteWrapper from "../components/siteWrapper/SiteWrapper.component";
 import Spacer from "../components/spacer/Spacer.component";
+import Prices from "../components/index/Prices.component";
 
 const Home: NextPage = () => {
   const [dropdownOpen, setdropdownOpen] = useState(false);
@@ -33,6 +34,7 @@ const Home: NextPage = () => {
       <Hero />
       <SiteWrapper>
         <HowInfo />
+        <Prices />
         <FAQ />
       </SiteWrapper>
       <Footer />
