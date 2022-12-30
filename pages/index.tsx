@@ -7,6 +7,7 @@ import HowInfo from "../components/index/HowInfo.component";
 import Hero from "../components/index/hero/Hero.component";
 import NavBar from "../components/navigation/NavBar.component";
 import SiteWrapper from "../components/siteWrapper/SiteWrapper.component";
+import Spacer from "../components/spacer/Spacer.component";
 
 const Home: NextPage = () => {
   const [dropdownOpen, setdropdownOpen] = useState(false);

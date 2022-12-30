@@ -1,4 +1,5 @@
 import React from "react";
+import Spacer from "../spacer/Spacer.component";
 
 export default function SiteWrapper({
   children,
@@ -6,10 +7,21 @@ export default function SiteWrapper({
   children: React.ReactNode;
 }) {
   return (
-    <div
-      className={` mx-auto w-[80vw] md:w-[60vw] flex flex-col pt-[160px]`}
-    >
-      {children}
+    <div>
+      {children
+        ? React.Children.map(children, (child) => {
+            return (
+              <>
+                <div
+                  className={` mx-auto w-[80vw] md:w-[60vw] flex flex-col pt-[160px]`}
+                >
+                  {child}
+                </div>
+                <Spacer />
+              </>
+            );
+          })
+        : null}
     </div>
   );
 }
