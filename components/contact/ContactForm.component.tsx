@@ -1,5 +1,4 @@
-import React from "react";
-import { useForm, ValidationError } from "@formspree/react";
+import { ValidationError, useForm } from "@formspree/react";
 import { motion } from "framer-motion";
 import DefaultButton from "../buttons/DefaultButton.component";
 
@@ -9,7 +8,7 @@ export default function ContactForm() {
   const [state, handleSubmit] = useForm("moqbklnl");
   if (state.succeeded) {
     return (
-      <div className="mt-20 w-fit mx-auto text-center">
+      <div className="my-20 w-fit mx-auto text-center">
         <p className="text-2xl 2xl:text-3xl">Takk for at du kontaktet oss!</p>
         <p className="text-sm 2xl:text-xl mb-10">
           Vi vil kontakte deg i løpet av 24 timer
@@ -27,7 +26,7 @@ export default function ContactForm() {
         <form onSubmit={handleSubmit}>
           <div className="flex-col mb-6">
             <label htmlFor="name">Kontaktperson</label>
-            <input id="name" type="name" name="name" />
+            <input id="name" type="name" name="name" className=""/>
             <ValidationError prefix="Name" field="name" errors={state.errors} />
           </div>
           <div className="flex-col mb-6">
@@ -39,35 +38,36 @@ export default function ContactForm() {
               errors={state.errors}
             />
           </div>
-          <div className="flex-col mb-6">
+          <div className="flex-col">
             <label htmlFor="message">Melding</label>
-            <textarea id="message" name="message" />
-            <p className="font-text pt-6 font-light text-sm text-center">
-              Vi vil kontakte deg tilbake i løpet av 24 timer
-            </p>
+            <textarea id="message" name="message" className="resize-none" />
+
             <ValidationError
               prefix="Message"
               field="message"
               errors={state.errors}
             />
           </div>
-
-          <motion.div className="text-center">
+          <p className="font-text py-8 font-light text-sm text-center">
+            Vi vil kontakte deg tilbake i løpet av 24 timer
+          </p>
+          <div className="text-center">
             <motion.button
               whileHover={{
                 scale: 1.1,
-                transition: { duration: 0.2 },
+                transition: { duration: 0.1 },
                 color: "#06283D",
                 backgroundColor: "#fff",
                 border: "1px solid #06283D",
               }}
+              whileTap={{ scale: 0.9 }}
               className="hover:cursor-pointer py-3 px-6 rounded bg-primary font-bold text-white"
               type="submit"
               disabled={state.submitting}
             >
               Send melding
             </motion.button>
-          </motion.div>
+          </div>
         </form>
       </div>
     </div>

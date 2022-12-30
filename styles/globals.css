@@ -29,7 +29,7 @@ iframe {
 
 input,
 textarea {
-  @apply border-2 border-gray-300 w-[80vw] md:w-[60vw] lg:w-[30vw] bg-white h-10 px-2 pr-40 rounded text-sm focus:outline-none;
+  @apply border-2 border-gray-300 w-[80vw] md:w-[60vw] lg:w-[30vw] bg-white h-10 px-2 rounded text-sm focus:outline-primary;
 }
 
 textarea {
