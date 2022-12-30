@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React, { useState } from "react";
 import NavBar from "../components/navigation/NavBar.component";
-import SiteWrapper from "../components/siteWrapper/SiteWrapper.componen";
+import SiteWrapper from "../components/siteWrapper/SiteWrapper.component";
 import UnderConstruction from "../components/underConstruction/UnderConstruction.component";
 import CompanyComponent from "../components/company/Company.component";
 import CompanyHero from "../components/company/CompanyHero.component";

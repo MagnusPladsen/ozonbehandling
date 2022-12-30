@@ -1,6 +1,6 @@
 import BulletInfo from "./BulletInfo.component";
 
-export default function How() {
+export default function HowInfo() {
   const paragraphStyling = "";
   return (
     <div className="pb-[160px]">

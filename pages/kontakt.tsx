@@ -1,9 +1,9 @@
 import Head from "next/head";
 import { useState } from "react";
-import ContactForm from "../components/contact/ContactForm.componen";
+import ContactForm from "../components/contact/ContactForm.component";
 import Footer from "../components/footer/Footer.component";
 import NavBar from "../components/navigation/NavBar.component";
-import SiteWrapper from "../components/siteWrapper/SiteWrapper.componen";
+import SiteWrapper from "../components/siteWrapper/SiteWrapper.component";
 
 export default function Contact() {
   const [dropdownOpen, setdropdownOpen] = useState(false);
