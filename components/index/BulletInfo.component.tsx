@@ -31,7 +31,7 @@ export default function BulletInfo() {
           </div>
           <p className="w-[80vw]">
             Vi sørger for at ozonen blir utluftet i henhold til
-            miljødirektoratets retningslinjer.
+            miljødirektoratets retningslinjer
           </p>
         </div>
 
@@ -45,13 +45,10 @@ export default function BulletInfo() {
             />
           </div>
           <p className="w-[80vw]">
-            Fornøydhetsgaranti Vi kommer tilbake og gjør jobben om du er ikke er fornøyd.
+            <span className="font-bold">Fornøydhetsgaranti!</span> Vi kommer tilbake og gjør jobben om du er ikke er fornøyd
           </p>
         </div>
       </div>
     </div>
   );
-
-  //Vi sørger for at ozonen blir utluftet i henhold til
-  // miljødirektoratets retningslinjer.
 }

@@ -20,7 +20,7 @@ export default function ContactForm() {
   }
   return (
     <div className="py-10 lg:py-0 mb-20">
-      <h2 className="font-header font-extrabold text-2xl text-center lg:py-8 lg:text-3xl">
+      <h2 className="font-header font-extrabold text-center text-4xl pb-16">
         Kontakt oss
       </h2>
       <div className="w-fit mx-auto mt-6">

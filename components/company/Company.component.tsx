@@ -6,7 +6,7 @@ export default function CompanyComponent() {
   const paragraphStyling = "";
   return (
     <div className="pb-[160px]">
-      <h2 className="font-header font-extrabold text-2xl text-center lg:pb-8 lg:text-3xl">
+      <h2 className="font-header font-extrabold text-center text-4xl pb-16">
         For bedrift
       </h2>
       <div className="text-left flex flex-col gap-2 font-text">

@@ -13,14 +13,13 @@ html,body { overflow-x: hidden;}
 }
 
 .company-hero {
-  background-image: url("../public/images/company-hero.jpg");
-  height: 40vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../public/images/company-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   align-items: center;
   justify-content: center;
-  @apply lg:h-[60vh];
+  @apply h-[100vh];
 }
 
 iframe {

@@ -6,7 +6,7 @@ export default function How() {
   const paragraphStyling = "";
   return (
     <div className="pb-[160px]">
-      <h2 className="font-header font-extrabold text-2xl text-center lg:text-4xl pb-16">
+      <h2 className="font-header font-extrabold text-center text-4xl pb-16">
         Hvordan?
       </h2>
       <div className="text-left flex flex-col gap-2 font-text ">
@@ -19,7 +19,7 @@ export default function How() {
           røyklukt og matlukt.
         </p>
         <p className={paragraphStyling}>
-          Prosessen kan gjøres i hotellrom, studentboliger hytter eller
+          Prosessen kan gjøres i hotellrom, studentboliger, hytter eller
           kjøretøy.
         </p>
         <BulletInfo />
