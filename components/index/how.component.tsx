@@ -1,5 +1,3 @@
-import React from "react";
-import DefaultButton from "../buttons/DefaultButton.component";
 import BulletInfo from "./BulletInfo.component";
 
 export default function How() {
@@ -12,7 +10,7 @@ export default function How() {
       <div className="text-left flex flex-col gap-2 font-text ">
         <p className={paragraphStyling}>
           En <span className="font-bold">ozongenerator</span> dreper all
-          organisk materiale uten bruk av kjemikalier. 
+          organisk materiale uten bruk av kjemikalier.
         </p>
         <p className={paragraphStyling}>
           Derfor er dette den mest effektive metoden for å fjerne blant annet

@@ -3,10 +3,11 @@ import Head from "next/head";
 import { useState } from "react";
 import Footer from "../components/footer/Footer.component";
 import Hero from "../components/index/hero/Hero.component";
-import How from "../components/index/How.component";
+
 import NavBar from "../components/navigation/NavBar.component";
 import SiteWrapper from "../components/siteWrapper/SiteWrapper.componen";
 import FAQ from "../components/index/FAQ.component";
+import How from "../components/index/How.component";
 
 const Home: NextPage = () => {
   const [dropdownOpen, setdropdownOpen] = useState(false);
