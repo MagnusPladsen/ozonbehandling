@@ -2,10 +2,11 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
 import Footer from "../components/footer/Footer.component";
-import Hero from "../components/hero/Hero.component";
-import How from "../components/index/how.component";
+import Hero from "../components/index/hero/Hero.component";
+import How from "../components/index/How.component";
 import NavBar from "../components/navigation/NavBar.component";
 import SiteWrapper from "../components/siteWrapper/SiteWrapper.componen";
+import FAQ from "../components/index/FAQ.component";
 
 const Home: NextPage = () => {
   const [dropdownOpen, setdropdownOpen] = useState(false);
@@ -13,7 +14,7 @@ const Home: NextPage = () => {
   return (
     <div className="">
       <Head>
-        <title>OzonMaskinen</title>
+        <title>Ozonbehandling</title>
         <link rel="icon" href="/favicon.svg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -21,11 +22,15 @@ const Home: NextPage = () => {
           href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500&display=swap"
           rel="stylesheet"
         />
+        <meta name="description" content="Permanent fjerning av lukt" />
+        <meta name="keywords" content="Ozonbehandling, lukt, hotell, hybel, leilighet, camping, hytte, hus, bil, bobil"/>
+        <meta name="author" content="Mangus Pladsen" />
       </Head>
       <NavBar dropdownOpen={dropdownOpen} setdropdownOpen={setdropdownOpen} />
-      <Hero className={blurIfDropdownOpen} />
+      <Hero />
       <SiteWrapper className={blurIfDropdownOpen} >
         <How />
+        <FAQ />
       </SiteWrapper>
       <Footer />
     </div>

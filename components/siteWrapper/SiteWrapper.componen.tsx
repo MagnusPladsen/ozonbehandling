@@ -9,7 +9,7 @@ export default function SiteWrapper({
 }) {
   return (
     <div
-      className={`${className} mx-auto w-[80vw] md:w-[60vw] flex flex-col pt-[120px]`}
+      className={`${className} mx-auto w-[80vw] md:w-[60vw] flex flex-col pt-[160px]`}
     >
       {children}
     </div>

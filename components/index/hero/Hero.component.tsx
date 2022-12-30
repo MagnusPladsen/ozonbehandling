@@ -1,8 +1,8 @@
-export default function Hero({ className }: { className: string }) {
+export default function Hero() {
   return (
-    <div className={`${className} relative`}>
+    <div className={`relative`}>
       <div className="hero h-screen">
-        <div className="flex flex-col gap-[30px] mx-auto px-[80px] text-white absolute bottom-[80px]">
+        <div className="flex flex-col gap-[30px] mx-auto px-[10vw] lg:px-[80px] text-white absolute bottom-[80px]">
           <div className="font-bold text-5xl lg:text-7xl">
           Permanent<br/> fjerning av lukt?
           </div>

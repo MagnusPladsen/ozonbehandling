@@ -15,31 +15,22 @@ export default function NavBar({
   const active = "underline underline-offset-8 opacity-100";
   return (
     <>
-      <div className="w-full fixed lg:absolute pt-[10vw] lg:pt-[60px] font-header px-[10vw] lg:px-[80px] lg:flex justify-between z-20">
-        <div className="flex justify-between lg:justify-start items-center lg:gap-10">
+      <div className="w-full bg-primary fixed lg:absolute py-[30px] font-header px-[10vw] lg:px-[40px] xl:px-[80px] lg:flex lg:align-middle justify-between z-20">
+        <div className="flex justify-between lg:justify-start items-center lg:gap-5">
           <Link href="/">
             <div className="">
-              <div className="hidden">
               <Image
                 src="/favicon.svg"
-                alt="OzonMaskinen"
-                width={75}
-                height={75}
-                className=" "
-              />
-              </div>
-              <Image
-                src="/favicon.svg"
-                alt="OzonMaskinen"
+                alt="Ozonbehandling"
                 width={35}
                 height={35}
-                className="block lg:hidden"
+                className=""
               />
             </div>
           </Link>
           <Link href="/">
-            <h1 className="text-white text-xl lg:text-4xl hover:cursor-pointer ">
-              OzonMaskinen
+            <h1 className="text-white text-xl lg:text-2xl hover:cursor-pointer ">
+              Ozonbehandling
             </h1>
           </Link>
           <div
@@ -58,13 +49,13 @@ export default function NavBar({
         </div>
 
         {/* DESKTOP NAV MENU */}
-        <div className="hidden z-10 lg:flex justify-between pt-[25px]">
-          <div className="mx-auto text-center text-white font-header text-lg font-bold flex flex-row gap-[80px]">
+        <div className="hidden z-10 lg:flex align-middle">
+          <div className="mx-auto text-white font-header text-lg font-bold flex flex-row gap-[80px]">
             <Link href="/">
               <motion.p
                 whileHover={{
-                  scale: 1.1,
-                  transition: { duration: 0.2 },
+                  scale: 1.2,
+                  transition: { duration: 0.1 },
                 }}
                 className={`hover:cursor-pointer  ${
                   router.pathname === "/" ? active : ""
@@ -76,8 +67,8 @@ export default function NavBar({
             <Link href="/bedrift">
               <motion.p
                 whileHover={{
-                  scale: 1.1,
-                  transition: { duration: 0.2 },
+                  scale: 1.2,
+                  transition: { duration: 0.1 },
                 }}
                 className={`hover:cursor-pointer ${
                   router.pathname === "/bedrift" ? active : ""
@@ -89,8 +80,8 @@ export default function NavBar({
             <Link href="/kontakt">
               <motion.p
                 whileHover={{
-                  scale: 1.1,
-                  transition: { duration: 0.2 },
+                  scale: 1.2,
+                  transition: { duration: 0.1 },
                 }}
                 className={`hover:cursor-pointer ${
                   router.pathname === "/kontakt" ? active : ""
@@ -102,8 +93,8 @@ export default function NavBar({
             <Link href="/om-oss">
               <motion.p
                 whileHover={{
-                  scale: 1.1,
-                  transition: { duration: 0.2 },
+                  scale: 1.2,
+                  transition: { duration: 0.1 },
                 }}
                 className={`hover:cursor-pointer ${
                   router.pathname === "/om-oss" ? active : ""
