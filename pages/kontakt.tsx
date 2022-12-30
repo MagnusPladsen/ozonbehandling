@@ -19,13 +19,18 @@ export default function Contact() {
           href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500&display=swap"
           rel="stylesheet"
         />
-        <meta name="description" content="Kontakt oss for å få en uforpliktende tilbud på ozonbehandling." />
-        <meta name="keywords" content="Ozonbehandling, lukt, hotell, hybel, leilighet, camping, hytte, hus, bil, bobil"/>
+        <meta
+          name="description"
+          content="Kontakt oss for å få en uforpliktende tilbud på ozonbehandling."
+        />
+        <meta
+          name="keywords"
+          content="Ozonbehandling, lukt, hotell, hybel, leilighet, camping, hytte, hus, bil, bobil"
+        />
         <meta name="author" content="Mangus Pladsen" />
-
       </Head>
       <NavBar dropdownOpen={dropdownOpen} setdropdownOpen={setdropdownOpen} />
-      <SiteWrapper className={blurIfDropdownOpen}>
+      <SiteWrapper>
         <ContactForm />
       </SiteWrapper>
       <Footer />

@@ -2,12 +2,11 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
 import Footer from "../components/footer/Footer.component";
-import Hero from "../components/index/hero/Hero.component";
-import NavBar from "../components/navigation/NavBar.component";
 import FAQ from "../components/index/FAQ.component";
 import HowInfo from "../components/index/HowInfo.component";
+import Hero from "../components/index/hero/Hero.component";
+import NavBar from "../components/navigation/NavBar.component";
 import SiteWrapper from "../components/siteWrapper/SiteWrapper.component";
-
 
 const Home: NextPage = () => {
   const [dropdownOpen, setdropdownOpen] = useState(false);
@@ -23,12 +22,15 @@ const Home: NextPage = () => {
           rel="stylesheet"
         />
         <meta name="description" content="Permanent fjerning av lukt" />
-        <meta name="keywords" content="Ozonbehandling, lukt, hotell, hybel, leilighet, camping, hytte, hus, bil, bobil"/>
+        <meta
+          name="keywords"
+          content="Ozonbehandling, lukt, hotell, hybel, leilighet, camping, hytte, hus, bil, bobil"
+        />
         <meta name="author" content="Mangus Pladsen" />
       </Head>
       <NavBar dropdownOpen={dropdownOpen} setdropdownOpen={setdropdownOpen} />
       <Hero />
-      <SiteWrapper >
+      <SiteWrapper>
         <HowInfo />
         <FAQ />
       </SiteWrapper>
