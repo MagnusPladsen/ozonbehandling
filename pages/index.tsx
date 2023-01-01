@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Footer from "../components/footer/Footer.component";
 import FAQ from "../components/index/FAQ.component";
 import HowInfo from "../components/index/HowInfo.component";
@@ -12,6 +12,51 @@ import Prices from "../components/index/Prices.component";
 
 const Home: NextPage = () => {
   const [dropdownOpen, setdropdownOpen] = useState(false);
+  const [howInfoOpen, setHowInfoOpen] = useState(true);
+  const [pricesOpen, setpricesOpen] = useState(false);
+  const [faqOpen, setfaqOpen] = useState(false);
+
+  // make a function that openes the clicked component and closes the others
+  const openComponent = (component: string) => {
+    if (component === "howInfo") {
+      if (howInfoOpen) {
+        setHowInfoOpen(false);
+      }
+      if (!howInfoOpen) {
+        setHowInfoOpen(true);
+      }
+      setpricesOpen(false);
+      setfaqOpen(false);
+    }
+    if (component === "prices") {
+      if (pricesOpen) {
+        setpricesOpen(false);
+      }
+      if (!pricesOpen) {
+        setpricesOpen(true);
+      }
+      setHowInfoOpen(false);
+      setfaqOpen(false);
+    }
+    if (component === "faq") {
+      if (faqOpen) {
+        setfaqOpen(false);
+      }
+      if (!faqOpen) {
+        setfaqOpen(true);
+      }
+      setHowInfoOpen(false);
+      setpricesOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (howInfoOpen === false && pricesOpen === false && faqOpen === false) {
+      setHowInfoOpen(true);
+    }
+  }, [howInfoOpen, pricesOpen, faqOpen]);
+  
+
   return (
     <div className="">
       <Head>
@@ -33,9 +78,9 @@ const Home: NextPage = () => {
       <NavBar dropdownOpen={dropdownOpen} setdropdownOpen={setdropdownOpen} />
       <Hero />
       <SiteWrapper>
-        <HowInfo />
-        <Prices />
-        <FAQ />
+        <Prices open={pricesOpen} setOpen={openComponent} />
+        <FAQ open={faqOpen} setOpen={openComponent} />
+        <HowInfo open={howInfoOpen} setOpen={openComponent} />
       </SiteWrapper>
       <Footer />
     </div>

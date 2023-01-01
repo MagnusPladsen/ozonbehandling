@@ -13,11 +13,11 @@ export default function SiteWrapper({
             return (
               <>
                 <div
-                  className={` mx-auto w-[80vw] md:w-[60vw] xl:w-[40vw] flex flex-col pt-[160px]`}
+                  className={` flex flex-col`}
                 >
                   {child}
                 </div>
-                <Spacer />
+                <div className="bg-white w-[80vw] mx-auto h-[2px]"></div>
               </>
             );
           })
