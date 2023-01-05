@@ -13,7 +13,7 @@ export default function SiteWrapper({
             return (
               <>
                 <div
-                  className={` flex flex-col`}
+                  className={` flex flex-col hover:cursor-pointer`}
                 >
                   {child}
                 </div>

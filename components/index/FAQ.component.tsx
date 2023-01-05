@@ -30,6 +30,7 @@ export default function FAQ({
         initial={{ display: "none", height: 0 }}
         animate={{ display: "block", height: "auto", marginTop: 40 }}
         exit={{ display: "none", height: 0 }}
+        transition={{ duration: 0.3 }}
           className={`text-left flex flex-col gap-5 font-text   w-[60vw] mx-auto`}
         >
             <p className={`${questionStyling}`}>Er ozon farlig?</p>
