@@ -16,19 +16,29 @@ const Home: NextPage = () => {
   const [pricesOpen, setpricesOpen] = useState(false);
   const [faqOpen, setfaqOpen] = useState(false);
 
-  // make a function that openes the clicked component and closes the others
   const openComponent = (component: string) => {
-    setHowInfoOpen(component === "howInfo");
-    setpricesOpen(component === "prices");
-    setfaqOpen(component === "faq");
+    // create a function that opens the component that is passed in, also closes the one
+
+    if (component === "howInfo") {
+      setHowInfoOpen(!howInfoOpen);
+      setpricesOpen(false);
+      howInfoOpen ? setfaqOpen(false) : setfaqOpen(false);
+
+    }
+    if (component === "prices") {
+      setHowInfoOpen(false);
+      setfaqOpen(false);
+      pricesOpen ? setpricesOpen(false) : setpricesOpen(true);
+    }
+    if (component === "faq") {
+      setHowInfoOpen(false);
+      setpricesOpen(false);
+      faqOpen ? setfaqOpen(false) : setfaqOpen(true);
+    }
+
+
   };
 
-  useEffect(() => {
-    if (howInfoOpen === false && pricesOpen === false && faqOpen === false) {
-      setHowInfoOpen(true);
-    }
-  }, [howInfoOpen, pricesOpen, faqOpen]);
-  
 
   return (
     <div className="">

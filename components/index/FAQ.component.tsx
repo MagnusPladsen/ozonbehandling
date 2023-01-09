@@ -2,6 +2,7 @@ import React from "react";
 import DefaultButton from "../buttons/DefaultButton.component";
 import BulletInfo from "./BulletInfo.component";
 import { AnimatePresence, motion } from "framer-motion";
+import OpenArrow from "../icons/OpenArrow.component";
 
 export default function FAQ({
   open,
@@ -13,26 +14,30 @@ export default function FAQ({
   const questionStyling = "font-bold text-lg underline";
   return (
     <div
-      className={`py-[60px] ${open ? "" : " bg-primary text-white"} w-full`}
+      className={`py-[60px] ${
+        open ? "" : " bg-primary text-white"
+      } w-full`}
       onClick={() => setOpen("faq")}
     >
-      <h2
-        className={`font-header font-extrabold text-2xl text-center lg:text-4xl ${
-          open ? "text-primary" : "text-white"
-        }`}
-      >
-        Ofte stilte spørsmål
-      </h2>
-      <AnimatePresence initial={false}
-    >
-      {open ? (
-        <motion.div
-        initial={{ display: "none", height: 0 }}
-        animate={{ display: "block", height: "auto", marginTop: 40 }}
-        exit={{ display: "none", height: 0 }}
-        transition={{ duration: 0.3 }}
-          className={`text-left flex flex-col gap-5 font-text   w-[60vw] mx-auto`}
+      <div className="flex justify-between items-center px-[10vw]">
+        <h2
+          className={`font-header font-extrabold text-2xl text-center lg:text-4xl ${
+            open ? "text-primary" : "text-white"
+          }`}
         >
+          Ofte stilte spørsmål
+        </h2>
+        <OpenArrow open={open} />
+      </div>
+      <AnimatePresence initial={false}>
+        {open ? (
+          <motion.div
+            initial={{ display: "none", height: 0 }}
+            animate={{ display: "block", height: "auto", marginTop: 40 }}
+            exit={{ display: "none", height: 0 }}
+            transition={{ duration: 0.3 }}
+            className={`text-left flex flex-col gap-5 font-text w-[80vw] mx-auto`}
+          >
             <p className={`${questionStyling}`}>Er ozon farlig?</p>
             <p className={``}>
               Ozon er skadelig å puste inn. Derfor er det viktig å forlate

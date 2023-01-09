@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import BulletInfo from "./BulletInfo.component";
+import OpenArrow from "../icons/OpenArrow.component";
 
 export default function HowInfo({
   open,
@@ -8,29 +9,31 @@ export default function HowInfo({
   open: boolean;
   setOpen: Function;
 }) {
-  const paragraphStyling = "";
+  const paragraphStyling = "mb-6";
   return (
     <div
-      className={`py-[60px] ${open ? "" : " bg-primary text-white"} `}
+      className={`py-[60px]  ${open ? "" : " bg-primary text-white"} w-full`}
       onClick={() => setOpen("howInfo")}
     >
-      <h2
-        className={`font-header font-extrabold text-2xl text-center lg:text-4xl ${
-          open ? "text-primary" : "text-white"
-        }`}
-      >
-        Hvordan?
-      </h2>
-      <AnimatePresence initial={false}
-    >
-      {open ? (
-        <motion.div
-        initial={{ display: "none", height: 0 }}
-        animate={{ display: "block", height: "auto", marginTop: 40 }}
-        exit={{ display: "none", height: 0 }}
-        transition={{ duration: 0.3 }}
-          className={`text-left flex flex-col gap-5 font-text   w-[60vw] mx-auto`}
+      <div className="flex justify-between items-center px-[10vw]">
+        <h2
+          className={`font-header font-extrabold text-2xl text-center lg:text-4xl ${
+            open ? "text-primary" : "text-white"
+          }`}
         >
+          Hvordan
+        </h2>
+        <OpenArrow open={open} />
+      </div>
+      <AnimatePresence initial={false}>
+        {open ? (
+          <motion.div
+            initial={{ display: "none", height: 0 }}
+            animate={{ display: "block", height: "auto", marginTop: 40 }}
+            exit={{ display: "none", height: 0 }}
+            transition={{ duration: 0.3 }}
+            className={`text-left flex flex-col gap-5 font-text w-[80vw] mx-auto`}
+          >
             <p className={paragraphStyling}>
               En <span className="font-bold">ozongenerator</span> bryter ned all
               organisk materiale uten bruk av kjemikalier. Dette vil si at
@@ -38,7 +41,7 @@ export default function HowInfo({
               av ozon.
             </p>
             <p className={paragraphStyling}>
-              Derfor er dette eneste metoden for permajent fjerning av blant
+              Derfor er dette eneste metoden for permanent fjerning av blant
               annet røyklukt, matlukt, innestengt lukt etc.
             </p>
             <p className={paragraphStyling}>
