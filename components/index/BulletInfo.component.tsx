@@ -13,7 +13,7 @@ export default function BulletInfo() {
     <div className="py-8">
       <div className="flex flex-col gap-8 content-center ">
         {text.map((text) => (
-          <div className="flex gap-5 align-center w-full  ">
+          <div key={text} className="flex gap-5 align-center w-full  ">
             <div className="flex items-center w-[10vw] lg:w-[5vw]">
               <Image
                 src={CheckMarkIcon}

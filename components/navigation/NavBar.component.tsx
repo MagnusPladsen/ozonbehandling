@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function NavBar({
   dropdownOpen,
@@ -108,46 +108,64 @@ export default function NavBar({
       </div>
 
       {/* DROPDOWN */}
-      {dropdownOpen && (
-        <div className="lg:hidden bg-primary fixed w-screen h-full font-header z-10 px-[20px] pt-32">
-          <div className="flex justify-between pb-10">
-            <div className="mx-auto text-center text-white font-header text-xl font-bold">
-              <Link href="/">
-                <p className={`py-10 ${router.pathname === "/" ? active : ""}`}>
-                  Hjem
-                </p>
-              </Link>
-              <Link href="/bedrift">
-                <div
-                  className={`py-10  ${
-                    router.pathname === "/bedrift" ? active : ""
-                  }`}
-                >
-                  Bedrift
-                </div>
-              </Link>
-              <Link href="/kontakt">
-                <p
-                  className={`py-10 ${
-                    router.pathname === "/kontakt" ? active : ""
-                  }`}
-                >
-                  Kontakt
-                </p>
-              </Link>
-              <Link href="/om-oss">
-                <p
-                  className={`py-10 ${
-                    router.pathname === "/om-oss" ? active : ""
-                  }`}
-                >
-                  Om oss
-                </p>
-              </Link>
+      <AnimatePresence initial={false}>
+        {dropdownOpen && (
+          <motion.div
+            /* initial={{ display: "none", height: 0 }}
+            animate={{ display: "block", height: "auto"}}
+            exit={{ display: "none", height: 0 }} */
+            //animate drop down animation inital and exit
+
+            initial={{ height: 0 }}
+            animate={{ height: "auto", overflow: "hidden" }}
+            exit={{ height: 0 }}
+
+
+
+            transition={{ duration: 0.1 }}
+            className="lg:hidden bg-primary fixed w-screen h-full font-header z-10 px-[20px] pt-32"
+          >
+            <div className="flex justify-between pb-10">
+              <div className="mx-auto text-center text-white font-header text-xl font-bold">
+                <Link href="/">
+                  <p
+                    className={`py-10 ${router.pathname === "/" ? active : ""}`}
+                  >
+                    Hjem
+                  </p>
+                </Link>
+                <Link href="/bedrift">
+                  <div
+                    className={`py-10  ${
+                      router.pathname === "/bedrift" ? active : ""
+                    }`}
+                  >
+                    Bedrift
+                  </div>
+                </Link>
+                <Link href="/kontakt">
+                  <p
+                    className={`py-10 ${
+                      router.pathname === "/kontakt" ? active : ""
+                    }`}
+                  >
+                    Kontakt
+                  </p>
+                </Link>
+                <Link href="/om-oss">
+                  <p
+                    className={`py-10 ${
+                      router.pathname === "/om-oss" ? active : ""
+                    }`}
+                  >
+                    Om oss
+                  </p>
+                </Link>
+              </div>
             </div>
-          </div>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }
