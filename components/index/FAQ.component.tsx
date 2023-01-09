@@ -14,12 +14,12 @@ export default function FAQ({
   const questionStyling = "font-bold text-lg underline";
   return (
     <div
-      className={`py-[60px] ${
+      className={`py-[60px] px-[30vw] ${
         open ? "" : " bg-primary text-white"
       } w-full`}
       onClick={() => setOpen("faq")}
     >
-      <div className="flex justify-between items-center px-[10vw]">
+      <div className="flex justify-between items-center ">
         <h2
           className={`font-header font-extrabold text-2xl text-center lg:text-4xl ${
             open ? "text-primary" : "text-white"
@@ -36,7 +36,7 @@ export default function FAQ({
             animate={{ display: "block", height: "auto", marginTop: 40 }}
             exit={{ display: "none", height: 0 }}
             transition={{ duration: 0.3 }}
-            className={`text-left flex flex-col gap-5 font-text w-[80vw] mx-auto`}
+            className={`text-left flex flex-col gap-5 font-text mx-auto lg:py-5`}
           >
             <p className={`${questionStyling}`}>Er ozon farlig?</p>
             <p className={``}>

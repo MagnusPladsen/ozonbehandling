@@ -16,10 +16,10 @@ export default function Prices({
   const text = ["0-50 KVM - 5000", "51-100 KVM - 6000", "101-150 - 8000", "151- 200 KVM - 10000", "201- 250 KVM - 12500", "Bobil/vogn/båt  - 3500", "Personbil/ suv - 3000"]
   return (
     <div
-      className={`py-[60px] ${open ? "" : " bg-primary text-white"} `}
+      className={`py-[60px] px-[10vw] lg:px-[30vw]  ${open ? "" : " bg-primary text-white"} `}
       onClick={() => setOpen("prices")}
     >
-      <div className="flex justify-between items-center px-[10vw]">
+      <div className="flex justify-between items-center">
         <h2
           className={`font-header font-extrabold text-2xl text-center lg:text-4xl ${
             open ? "text-primary" : "text-white"
@@ -36,7 +36,7 @@ export default function Prices({
             animate={{ display: "block", height: "auto", marginTop: 40 }}
             exit={{ display: "none", height: 0 }}
             transition={{ duration: 0.3 }}
-            className={`text-left flex flex-col gap-5 font-text w-[80vw] mx-auto`}
+            className={`text-left flex flex-col gap-5 font-text  lg:py-5  mx-auto`}
           >
             <p className={`${questionStyling}`}>Våre tilbud:</p>
             {text.map((item, index) => (
