@@ -17,3 +17,15 @@ module.exports = {
   },
   plugins: [/* require("@tailwindcss/forms") */],
 };
+
+/*
+
+@/
+
+
+/* Mulige farger:
+#487eb0
+#273c75
+
+
+*/
