@@ -4,7 +4,7 @@
 
 html,body { overflow-x: hidden;}
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url("../public/images/alt-hero.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url("../public/images/alt-hero2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
