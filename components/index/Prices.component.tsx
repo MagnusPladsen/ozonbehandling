@@ -4,6 +4,7 @@ import BulletInfo from "./BulletInfo.component";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import OpenArrow from "../icons/OpenArrow.component";
+import TextBox from "../textBox/TextBox.component";
 
 export default function Prices({
   open,
@@ -12,41 +13,28 @@ export default function Prices({
   open: boolean;
   setOpen: Function;
 }) {
-  const questionStyling = "font-bold text-lg underline mb-2";
-  const text = ["0-50 KVM - 5000", "51-100 KVM - 6000", "101-150 - 8000", "151- 200 KVM - 10000", "201- 250 KVM - 12500", "Bobil/vogn/båt  - 3500", "Personbil/ suv - 3000"]
+  const prices = [
+    "0-50 kvm - 5 000 kr",
+    "51-100 kvm - 6 000 kr",
+    "101-150 kvm - 8 000 kr",
+    "151-200 kvm - 10 000 kr",
+    "201-250 kvm - 12 500 kr",
+  ];
   return (
-    <div
-      className={`py-[60px] px-[10vw] lg:px-[30vw]  ${open ? "" : " bg-primary text-white"} `}
-      onClick={() => setOpen("prices")}
-    >
-      <div className="flex justify-between items-center">
-        <h2
-          className={`font-header font-extrabold text-2xl text-center lg:text-4xl ${
-            open ? "text-primary" : "text-white"
-          }`}
-        >
-          Priser
-        </h2>
-        <OpenArrow open={open} />
+    <TextBox open={open} setOpen={setOpen} header="Priser" component="prices">
+      <div className="flex flex-col gap-1">
+        {prices.map((price, index) => (
+          <p key={index} className="">
+            {price}
+          </p>
+        ))}
       </div>
-      <AnimatePresence initial={false}>
-        {open ? (
-          <motion.div
-            initial={{ display: "none", height: 0 }}
-            animate={{ display: "block", height: "auto", marginTop: 40 }}
-            exit={{ display: "none", height: 0 }}
-            transition={{ duration: 0.3 }}
-            className={`text-left flex flex-col gap-5 font-text  lg:py-5  mx-auto`}
-          >
-            <p className={`${questionStyling}`}>Våre tilbud:</p>
-            {text.map((item, index) => (
-              <p key={index} className="mb-2">
-                - {item}
-                </p>
-            ))}
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
-    </div>
+      <p className="mt-8 mb-1">Bobil/vogn/båt - 3500</p>
+      <p className="">Personbil/ suv - 3000</p>
+      {/* <motion.p 
+      whileHover={{ opacity: 0.5, x: 20 }}
+      transition={{ duration: 0.2 }}
+      className="text-lg mt-16 underline font-bold">Les mer</motion.p> */}
+    </TextBox>
   );
 }

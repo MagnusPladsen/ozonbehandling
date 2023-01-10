@@ -8,30 +8,32 @@ export default function ContactForm() {
   const [state, handleSubmit] = useForm("moqbklnl");
   if (state.succeeded) {
     return (
-      <div className="my-20 w-fit mx-auto text-center">
+      <div className="pt-[160px] pb-[160px] px-[10vw] lg:px-[30vw] 3xl:px-[40vw] text-center">
         <p className="text-2xl 2xl:text-3xl">Takk for at du kontaktet oss!</p>
-        <p className="text-sm 2xl:text-xl mb-10">
+        <p className="text-sm 2xl:text-xl my-10 ">
           Vi vil kontakte deg i løpet av 24 timer
         </p>
-        <DefaultButton link="/" text="Hjem" onClick={() => {}} />
+        <div className="w-fit mx-auto">
+          <DefaultButton link="/" text="Hjem" onClick={() => {}} />
+        </div>
       </div>
     );
   }
   return (
-    <div className="py-10 lg:py-0 mb-20">
-      <h2 className="font-header font-extrabold text-center text-4xl pb-16">
+    <div className="pt-[160px] pb-[160px] px-[10vw] lg:px-[30vw] 3xl:px-[40vw]">
+      <h2 className="font-header font-extrabold text-left text-4xl pb-16">
         Kontakt oss
       </h2>
-      <div className="w-fit mx-auto mt-6">
+      <div className="">
         <form onSubmit={handleSubmit}>
           <div className="flex-col mb-6">
-            <label htmlFor="name">Kontaktperson</label>
-            <input id="name" type="name" name="name" className=""/>
+            <label htmlFor="name">Kontakt person</label>
+            <input id="name" type="name" name="name" className="w-full" />
             <ValidationError prefix="Name" field="name" errors={state.errors} />
           </div>
           <div className="flex-col mb-6">
-            <label htmlFor="email">Epost Adresse</label>
-            <input id="email" type="email" name="email" />
+            <label htmlFor="email">Epost</label>
+            <input id="email" type="email" name="email" className="w-full" />
             <ValidationError
               prefix="Email"
               field="email"
@@ -40,7 +42,11 @@ export default function ContactForm() {
           </div>
           <div className="flex-col">
             <label htmlFor="message">Melding</label>
-            <textarea id="message" name="message" className="resize-none" />
+            <textarea
+              id="message"
+              name="message"
+              className="resize-none w-full"
+            />
 
             <ValidationError
               prefix="Message"

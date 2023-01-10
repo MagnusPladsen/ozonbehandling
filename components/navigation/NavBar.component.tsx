@@ -55,7 +55,7 @@ export default function NavBar({
             initial={{ y: -100 }}
             exit={{ y: -100 }}
             transition={{ duration: 0.2 }}
-            className="w-full bg-primary fixed lg:absolute py-[30px] font-header px-[10vw] lg:px-[40px] xl:px-[80px] z-20"
+            className="w-full bg-primary fixed py-[30px] font-header px-[10vw] lg:px-[40px] xl:px-[80px] z-20 shadow-md"
           >
             <div className=" lg:flex lg:align-middle justify-between">
               <div className="flex justify-between lg:justify-start items-center lg:gap-5 z-30">
@@ -71,9 +71,13 @@ export default function NavBar({
                   </div>
                 </Link>
                 <Link href="/">
-                  <h1 className="text-white text-xl lg:text-2xl hover:cursor-pointer ">
+                  <motion.h1
+                    whileHover={{ opacity: 0.5 }}
+                    transition={{ duration: 0.1 }}
+                    className="text-white text-xl lg:text-2xl hover:cursor-pointer "
+                  >
                     Ozonbehandling
-                  </h1>
+                  </motion.h1>
                 </Link>
                 <div
                   className="lg:hidden"
@@ -99,8 +103,8 @@ export default function NavBar({
                     <motion.p
                       whileHover={{
                         scale: 1.2,
-                        transition: { duration: 0.1 },
                       }}
+                      transition={{ duration: 0.1 }}
                       className={`hover:cursor-pointer  ${
                         router.pathname === "/" ? active : ""
                       }`}
@@ -112,8 +116,8 @@ export default function NavBar({
                     <motion.p
                       whileHover={{
                         scale: 1.2,
-                        transition: { duration: 0.1 },
                       }}
+                      transition={{ duration: 0.1 }}
                       className={`hover:cursor-pointer ${
                         router.pathname === "/bedrift" ? active : ""
                       }`}
@@ -125,8 +129,8 @@ export default function NavBar({
                     <motion.p
                       whileHover={{
                         scale: 1.2,
-                        transition: { duration: 0.1 },
                       }}
+                      transition={{ duration: 0.1 }}
                       className={`hover:cursor-pointer ${
                         router.pathname === "/kontakt" ? active : ""
                       }`}
@@ -138,8 +142,8 @@ export default function NavBar({
                     <motion.p
                       whileHover={{
                         scale: 1.2,
-                        transition: { duration: 0.1 },
                       }}
+                      transition={{ duration: 0.1 }}
                       className={`hover:cursor-pointer ${
                         router.pathname === "/om-oss" ? active : ""
                       }`}

@@ -5,8 +5,8 @@ import BulletInfo from "../index/BulletInfo.component";
 export default function CompanyComponent() {
   const paragraphStyling = "";
   return (
-    <div className="pb-[160px]">
-      <h2 className="font-header font-extrabold text-center text-4xl pb-16">
+    <div className="py-[80px] px-[10vw] lg:px-[30vw] 3xl:px-[40vw]">
+      <h2 className="font-header font-extrabold text-left  text-2xl lg:text-4xl pb-8 lg:pb-16">
         For bedrift
       </h2>
       <div className="text-left flex flex-col gap-2 font-text">
@@ -37,8 +37,8 @@ export default function CompanyComponent() {
           </div>
         </div>
       </div>
-      <p className="font-text pt-20 text-center font-light text-sm">
-        *Tilbudet gjelder 1 gratis demo hos overnattingssteder, større
+      <p className="font-text lg:pt-20 text-center font-light text-sm">
+        * Tilbudet gjelder 1 gratis demo hos overnattingssteder, større
         utleievirksomheter og kjøretøyforhandlere
       </p>
     </div>

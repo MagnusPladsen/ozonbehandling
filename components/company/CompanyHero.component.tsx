@@ -6,10 +6,10 @@ export default function CompanyHero() {
     <div className={`relative`}>
       <div className="company-hero h-screen">
         <div className="flex flex-col gap-[30px] mx-auto px-[10vw] lg:px-[80px] text-white absolute bottom-[80px]">
-          <div className="font-bold text-5xl lg:text-7xl">
+          <div className="font-bold text-5xl lg:text-8xl 2xl:text-9xl">
           Bedrift
           </div>
-          <div className="font-semibold text-xl lg:text-2xl">
+          <div className="font-semibold text-xl lg:text-2xl 2xl:text-3xl">
           - Vi løser deres problemer med lukt
           </div>
         </div>
