@@ -12,7 +12,7 @@ export default function HowInfo({
   const paragraphStyling = "mb-6";
   return (
     <div
-      className={`py-[60px] px-[30vw] ${open ? "" : " bg-primary text-white"} w-full`}
+      className={`py-[60px] px-[10vw] lg:px-[30vw] ${open ? "" : " bg-primary text-white"} w-full`}
       onClick={() => setOpen("howInfo")}
     >
       <div className="flex justify-between items-center ">
