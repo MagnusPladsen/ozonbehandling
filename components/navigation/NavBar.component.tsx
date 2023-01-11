@@ -30,6 +30,10 @@ export default function NavBar({
       }
 
       // remember current page location to use in the next move
+      console.log(window.scrollY);
+      if (window.scrollY === 0) {
+        setShow(true);
+      }
       setLastScrollY(window.scrollY);
     }
   };
@@ -43,7 +47,7 @@ export default function NavBar({
         window.removeEventListener("scroll", controlNavbar);
       };
     }
-  }, []);
+  }, [lastScrollY]);
 
   return (
     <>
