@@ -19,6 +19,7 @@ export default function NavBar({
 
   const controlNavbar = () => {
     if (typeof window !== "undefined") {
+      setShow(true);
       if (window.scrollY > lastScrollY) {
         // if scroll down hide the navbar
         setShow(false);
