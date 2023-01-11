@@ -1,6 +1,10 @@
 import Head from "next/head";
 import { useState } from "react";
 import UnderConstruction from "../components/underConstruction/UnderConstruction.component";
+import SiteWrapper from "../components/siteWrapper/SiteWrapper.component";
+import AboutUs from "../components/aboutUs/AboutUs.component";
+import NavBar from "../components/navigation/NavBar.component";
+import Footer from "../components/footer/Footer.component";
 
 export default function About() {
   const [dropdownOpen, setdropdownOpen] = useState(false);
@@ -19,7 +23,12 @@ export default function About() {
         />
         <meta name="author" content="Mangus Pladsen" />
       </Head>
-      <UnderConstruction />
+      {/* <UnderConstruction /> */}
+      <NavBar dropdownOpen={dropdownOpen} setdropdownOpen={setdropdownOpen} />
+      <SiteWrapper>
+        <AboutUs header="Om oss"/>
+      </SiteWrapper>
+      <Footer />
     </>
   );
 }

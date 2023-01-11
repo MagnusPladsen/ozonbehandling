@@ -27,7 +27,7 @@ export default function HowInfo({
         overflatemugg. Prosessen kan gjennomføres i bolig, utleieenheter og
         kjøretøy.
       </p>
-      <BulletInfo />
+{/*       <BulletInfo /> */}
     </TextBox>
   );
 }

@@ -5,7 +5,8 @@ export default function Footer() {
   return (
     <div className="bg-primary py-20 text-white font-header flex lg:flex-row flex-col gap-8 lg:gap-[10vw] justify-center mx-auto">
       <div className="pb-5 w-[80vw] lg:w-[25vw] 3xl:w-[10vw] lg:flex lg:flex-col lg:gap-2 mx-auto xl:m-0">
-        <div className="flex gap-7">
+        <div className="flex gap-7 justify-between">
+          <p className="text-2xl">Kontaktinformasjon:</p>
           <div className="">
             <Image
               src="/favicon.svg"
@@ -15,11 +16,10 @@ export default function Footer() {
               className=""
             />
           </div>
-          <p className="text-2xl">Kontaktinformasjon:</p>
           {/*  <p className="text-2xl">Ozonbehandling</p> */}
         </div>
 
-        <div className="bg-white w-full mx-auto h-[2px] my-3"></div>
+        <div className="bg-white w-full mx-auto h-[2px] lg:my-3 mt-8  "></div>
         <div className="flex justify-between pt-8 lg:pt-0">
           <p className="">Tlf:</p>
           <p className="">973 06 141</p>
