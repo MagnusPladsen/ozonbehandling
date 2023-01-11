@@ -1,4 +1,5 @@
 import React from "react";
+import DefaultButton from "../buttons/DefaultButton.component";
 
 export default function AboutUs({ header }: { header: string }) {
   const paragraphStyling = "";
@@ -22,6 +23,19 @@ export default function AboutUs({ header }: { header: string }) {
           sin behandling. Bedriften er opptatt av kvalitet, tillitt og
           effektivitet.
         </p>
+        <div className="py-16 flex flex-col gap-10">
+          <p className="font-text font-bold text-lg text-center">
+            Ta kontakt for et uforpliktende tilbud eller andre henvendelser.
+          </p>
+          <div className="w-fit mx-auto">
+            <DefaultButton
+              link="/kontakt"
+              text="Kontakt oss"
+              onClick={() => {}}
+              className=""
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -27,7 +27,7 @@ export default function DefaultButton({
           whileTap={{
             scale: 0.9,
           }}
-          className={`hover:cursor-pointer py-3 px-10 rounded bg-primary font-bold text-white ${className}`}
+          className={`hover:cursor-pointer py-3 px-10 rounded bg-primary font-bold text-white border border-white ${className}`}
         >
           {text}
         </motion.button>

@@ -53,8 +53,8 @@ const Home: NextPage = () => {
       <BulletInfoHorizontal />
       <SiteWrapperHome>
         <HowInfo open={howInfoOpen} setOpen={openComponent} />
-        <Prices open={pricesOpen} setOpen={openComponent} />
         <FAQ open={faqOpen} setOpen={openComponent} />
+        <Prices open={pricesOpen} setOpen={openComponent} />
       </SiteWrapperHome>
       <Footer />
     </div>

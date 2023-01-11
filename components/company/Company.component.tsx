@@ -11,8 +11,7 @@ export default function CompanyComponent({ header }: { header: string }) {
       </h2>
       <div className="text-left flex flex-col gap-2 font-text">
         <p className={paragraphStyling}>
-          En <span className="font-bold">ozongenerator</span> dreper all
-          organisk materiale uten bruk av kjemikalier.
+          <span className="font-bold">Ozonbehandling</span> kan forbedre luftkvalitet og hygien i din bedrift. Våre tjenester inkluderer desinfisering, luktbekjempelse og luftrensing.
         </p>
         <p className={paragraphStyling}>
           Derfor er dette den mest effektive metoden for å fjerne blant annet
@@ -24,7 +23,7 @@ export default function CompanyComponent({ header }: { header: string }) {
         <BulletInfo />
         <div className="py-16 flex flex-col gap-10">
           <p className="font-text font-bold text-lg text-center">
-            Vi tilbyr også skreddersydde pakker til deres behov. <br /> Ta
+            Vi tilbyr skreddersydde løsninger til deres unike behov. <br /> Ta
             kontakt for et uforpliktende tilbud eller andre henvendelser.
           </p>
           <div className="w-fit mx-auto">
