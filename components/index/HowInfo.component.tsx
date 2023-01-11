@@ -10,7 +10,7 @@ export default function HowInfo({
   open: boolean;
   setOpen: Function;
 }) {
-  const paragraphStyling = "mb-6";
+  const paragraphStyling = "mb-3";
   return (
     <TextBox open={open} setOpen={setOpen} header="Hvordan" component="how">
       <p className={paragraphStyling}>

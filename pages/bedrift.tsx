@@ -26,7 +26,7 @@ export default function Company() {
       <NavBar dropdownOpen={dropdownOpen} setdropdownOpen={setdropdownOpen} />
       <CompanyHero />
       <SiteWrapper>
-        <CompanyComponent />
+        <CompanyComponent header="For Bedrift"/>
       </SiteWrapper>
       <Footer />
     </>

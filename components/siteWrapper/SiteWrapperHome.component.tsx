@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function SiteWrapper({
+export default function SiteWrapperHome({
   children,
 }: {
   children: React.ReactNode;
@@ -14,6 +14,7 @@ export default function SiteWrapper({
                 <div className={` flex flex-col hover:cursor-pointer`}>
                   {child}
                 </div>
+                <div className="bg-white w-[80vw] mx-auto h-[2px]"></div>
               </>
             );
           })

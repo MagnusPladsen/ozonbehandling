@@ -31,10 +31,10 @@ export default function Prices({
       </div>
       <p className="mt-8 mb-1">Bobil/vogn/båt - 3500</p>
       <p className="">Personbil/ suv - 3000</p>
-      {/* <motion.p 
+      <motion.p 
       whileHover={{ opacity: 0.5, x: 20 }}
       transition={{ duration: 0.2 }}
-      className="text-lg mt-16 underline font-bold">Les mer</motion.p> */}
+      className="text-lg mt-16 underline font-bold">Les mer</motion.p>
     </TextBox>
   );
 }

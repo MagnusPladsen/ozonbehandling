@@ -6,9 +6,10 @@ import FAQ from "../components/index/FAQ.component";
 import HowInfo from "../components/index/HowInfo.component";
 import Hero from "../components/index/hero/Hero.component";
 import NavBar from "../components/navigation/NavBar.component";
-import SiteWrapper from "../components/siteWrapper/SiteWrapper.component";
+import SiteWrapperHome from "../components/siteWrapper/SiteWrapperHome.component";
 import Spacer from "../components/spacer/Spacer.component";
 import Prices from "../components/index/Prices.component";
+import BulletInfoHorizontal from "../components/index/BulletInfoHorizontal.component";
 
 const Home: NextPage = () => {
   const [dropdownOpen, setdropdownOpen] = useState(false);
@@ -23,7 +24,6 @@ const Home: NextPage = () => {
       setHowInfoOpen(!howInfoOpen);
       setpricesOpen(false);
       howInfoOpen ? setfaqOpen(false) : setfaqOpen(false);
-
     }
     if (component === "prices") {
       setHowInfoOpen(false);
@@ -35,10 +35,7 @@ const Home: NextPage = () => {
       setpricesOpen(false);
       faqOpen ? setfaqOpen(false) : setfaqOpen(true);
     }
-
-
   };
-
 
   return (
     <div className="">
@@ -53,11 +50,12 @@ const Home: NextPage = () => {
       </Head>
       <NavBar dropdownOpen={dropdownOpen} setdropdownOpen={setdropdownOpen} />
       <Hero />
-      <SiteWrapper>
+      <BulletInfoHorizontal />
+      <SiteWrapperHome>
+        <HowInfo open={howInfoOpen} setOpen={openComponent} />
         <Prices open={pricesOpen} setOpen={openComponent} />
         <FAQ open={faqOpen} setOpen={openComponent} />
-        <HowInfo open={howInfoOpen} setOpen={openComponent} />
-      </SiteWrapper>
+      </SiteWrapperHome>
       <Footer />
     </div>
   );
