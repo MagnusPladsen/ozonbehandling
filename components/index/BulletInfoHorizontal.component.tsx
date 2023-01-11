@@ -6,7 +6,7 @@ export default function BulletInfoHorizontal() {
   return (
     <>
       <div className="py-20">
-        <div className="flex flex-row justify-evenly ">
+        <div className="flex flex-col gap-20 lg:gap-0 lg:flex-row justify-evenly ">
           <div className="flex flex-col gap-10">
             <div className="flex justify-center ">
               <Image
@@ -16,7 +16,7 @@ export default function BulletInfoHorizontal() {
                 height={100}
               />
             </div>
-            <p className="">Fornøydhetsgaranti</p>
+            <p className="mx-auto">Fornøydhetsgaranti</p>
           </div>
           <div className="flex flex-col gap-10">
             <div className="flex justify-center ">
@@ -27,7 +27,7 @@ export default function BulletInfoHorizontal() {
                 height={100}
               />
             </div>
-            <p className="">Raskt, trygt og effektivt</p>
+            <p className="mx-auto">Raskt, trygt og effektivt</p>
           </div>
           <div className="flex flex-col gap-10">
             <div className="flex justify-center ">
@@ -38,7 +38,7 @@ export default function BulletInfoHorizontal() {
                 height={100}
               />
             </div>
-            <p className="">Miljøvennlig og kjemikalie fritt</p>
+            <p className="mx-auto">Miljøvennlig og kjemikalie fritt</p>
           </div>
         </div>
       </div>
