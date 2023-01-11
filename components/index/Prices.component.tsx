@@ -20,21 +20,29 @@ export default function Prices({
     "151-200 kvm - 10 000 kr",
     "201-250 kvm - 12 500 kr",
   ];
+
+  const headerStyling = "font-bold text-xl underline underline-offset-2 pb-1 ";
   return (
     <TextBox open={open} setOpen={setOpen} header="Priser" component="prices">
       <div className="flex flex-col gap-1">
+        <p className={headerStyling}>Bolig:</p>
         {prices.map((price, index) => (
           <p key={index} className="">
             {price}
           </p>
         ))}
+        <p className={`${headerStyling} mt-4  `}>Andre:</p>
+        <p className="">Bobil/vogn/båt - 3500</p>
+        <p className="">Personbil/ suv - 3000</p>
       </div>
-      <p className="mt-8 mb-1">Bobil/vogn/båt - 3500</p>
-      <p className="">Personbil/ suv - 3000</p>
-      <motion.p 
-      whileHover={{ opacity: 0.5, x: 20 }}
-      transition={{ duration: 0.2 }}
-      className="text-lg mt-16 underline font-bold">Les mer</motion.p>
+
+      <motion.p
+        whileHover={{ opacity: 0.5, x: 20 }}
+        transition={{ duration: 0.2 }}
+        className="text-lg mt-16 underline font-bold"
+      >
+        Les mer
+      </motion.p>
     </TextBox>
   );
 }

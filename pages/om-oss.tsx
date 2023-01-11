@@ -21,7 +21,7 @@ export default function About() {
           name="keywords"
           content="Ozonbehandling, lukt, hotell, hybel, leilighet, camping, hytte, hus, bil, bobil"
         />
-        <meta name="author" content="Mangus Pladsen" />
+        <meta name="author" content="Magnus Pladsen" />
       </Head>
       {/* <UnderConstruction /> */}
       <NavBar dropdownOpen={dropdownOpen} setdropdownOpen={setdropdownOpen} />
