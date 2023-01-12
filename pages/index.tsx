@@ -10,6 +10,8 @@ import SiteWrapperHome from "../components/siteWrapper/SiteWrapperHome.component
 import Spacer from "../components/spacer/Spacer.component";
 import Prices from "../components/index/Prices.component";
 import BulletInfoHorizontal from "../components/index/BulletInfoHorizontal.component";
+import { useScroll } from "framer-motion";
+import ScrollProgressBar from "../components/scrollProgressBar/ScrollProgressBar.component";
 
 const Home: NextPage = () => {
   const [dropdownOpen, setdropdownOpen] = useState(false);
@@ -36,6 +38,7 @@ const Home: NextPage = () => {
       faqOpen ? setfaqOpen(false) : setfaqOpen(true);
     }
   };
+  /* const { scrollYProgress } = useScroll(); */
 
   return (
     <div className="">
@@ -48,6 +51,7 @@ const Home: NextPage = () => {
         />
         <meta name="author" content="Magnus Pladsen" />
       </Head>
+      {/* <ScrollProgressBar scrollYProgress={scrollYProgress} /> */}
       <NavBar dropdownOpen={dropdownOpen} setdropdownOpen={setdropdownOpen} />
       <Hero />
       <BulletInfoHorizontal />
