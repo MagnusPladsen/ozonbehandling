@@ -38,7 +38,6 @@ const Home: NextPage = () => {
       faqOpen ? setfaqOpen(false) : setfaqOpen(true);
     }
   };
-  /* const { scrollYProgress } = useScroll(); */
 
   return (
     <div className="">
@@ -51,7 +50,6 @@ const Home: NextPage = () => {
         />
         <meta name="author" content="Magnus Pladsen" />
       </Head>
-      {/* <ScrollProgressBar scrollYProgress={scrollYProgress} /> */}
       <NavBar dropdownOpen={dropdownOpen} setdropdownOpen={setdropdownOpen} />
       <Hero />
       <BulletInfoHorizontal />

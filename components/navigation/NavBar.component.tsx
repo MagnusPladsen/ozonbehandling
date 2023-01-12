@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useScroll } from "framer-motion";
+import ScrollProgressBar from "../scrollProgressBar/ScrollProgressBar.component";
 
 export default function NavBar({
   dropdownOpen,
@@ -17,24 +18,28 @@ export default function NavBar({
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  const controlNavbar = () => {
-    if (typeof window !== "undefined") {
-      setShow(true);
-      if (window.scrollY > lastScrollY) {
-        // if scroll down hide the navbar
-        setShow(false);
-        setdropdownOpen(false);
-      } else {
-        // if scroll up show the navbar
-        setShow(true);
-      }
+  /* const { scrollYProgress } = useScroll(); */
 
-      // remember current page location to use in the next move
-      console.log(window.scrollY);
-      if (window.scrollY === 0) {
+  const controlNavbar = () => {
+    console.log(window.scrollY);
+    if (window.scrollY < 10) {
+      setShow(true);
+    } else {
+      if (typeof window !== "undefined") {
         setShow(true);
+        if (window.scrollY > lastScrollY) {
+          // if scroll down hide the navbar
+          setShow(false);
+          setdropdownOpen(false);
+        } else {
+          // if scroll up show the navbar
+          setShow(true);
+        }
+
+        // remember current page location to use in the next move
+
+        setLastScrollY(window.scrollY);
       }
-      setLastScrollY(window.scrollY);
     }
   };
 
@@ -51,6 +56,7 @@ export default function NavBar({
 
   return (
     <>
+      {/* <ScrollProgressBar scrollYProgress={scrollYProgress} /> */}
       <AnimatePresence initial={false}>
         {show ? (
           <motion.div
