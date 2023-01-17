@@ -16,7 +16,7 @@ export default function AboutUs({ header }: { header: string }) {
         </p>
         <p className={`${paragraphStyling} mb-4`}>
           Vi tilbyr et bredt spekter av behandlinger, som fjerning av røyklukt,
-          dyrelukt og andre ulvekomne lukter.
+          dyrelukt og andre uvedkommende lukter.
         </p>
         <p className={`${paragraphStyling}`}>
           Bedriften benytter seg av miljøvennlige og kjemikaliefrie produkter i
