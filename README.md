@@ -7,4 +7,4 @@ ozonbehandling.no
 
 ```npm install```
 
-npm run dev```
+```npm run dev```
