@@ -1,5 +1,5 @@
-# ozonbehandling
-ozonbehandling.no
+# Ozonbehandling
+https://www.ozonbehandling.no
 
 # Get it up and running
 
