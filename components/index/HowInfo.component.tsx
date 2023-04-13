@@ -35,21 +35,6 @@ export default function HowInfo({
         luft. Det trenger ikke å bruke kjemikalier eller skadelige løsninger som
         kan skade mennesker og miljø.
       </p>
-      {/*   <p className={paragraphStyling}>
-        En <span className="font-bold">ozongenerator</span> bryter ned all
-        organisk materiale uten bruk av kjemikalier. Dette vil si at kilden til
-        lukten blir molekylert oppløst og brutt ned vil hjelp av ozon.
-      </p>
-      <p className={paragraphStyling}>
-        Derfor er dette eneste metoden for permanent fjerning av blant annet
-        røyklukt, matlukt, innestengt lukt etc.
-      </p>
-      <p className={paragraphStyling}>
-        Kraftig behandling vil i tillegg eliminere skadedyr, bakterier og
-        overflatemugg. Prosessen kan gjennomføres i bolig, utleieenheter og
-        kjøretøy.
-      </p> */}
-      {/*       <BulletInfo /> */}
     </TextBox>
   );
 }

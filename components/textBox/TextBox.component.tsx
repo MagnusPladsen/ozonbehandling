@@ -17,20 +17,20 @@ export default function TextBox({
 }) {
   return (
     <div
-      className={`py-[60px] px-[10vw] lg:px-[30vw] 3xl:px-[40vw] ${
+      className={`py-[60px] px-[10vw] lg:px-[30vw] 3xl:px-[40vw] group transition-all ${
         open ? "" : " bg-primary text-white"
       } `}
       onClick={() => setOpen(component)}
     >
       <div className="flex justify-between items-center">
         <h2
-          className={`font-header font-extrabold text-2xl text-center lg:text-4xl ${
-            open ? "text-primary" : "text-white"
+          className={`font-header font-extrabold text-2xl text-center lg:text-4xl transition-all  ${
+            open ? "text-primary" : "text-white group-hover:underline underline-offset-2"
           }`}
         >
           {header}
         </h2>
-        <OpenArrow open={open} />
+        <OpenArrow open={open} className="group-hover:-rotate-90 transition-all" />
       </div>
 
       <AnimatePresence initial={false}>

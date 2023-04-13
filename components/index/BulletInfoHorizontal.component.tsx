@@ -5,37 +5,37 @@ import CheckMarkIcon from "/public/images/icons/checkMark.png";
 export default function BulletInfoHorizontal() {
   return (
     <>
-      <div className="py-20">
+      <div className="py-20 bg-primary text-white">
         <div className="flex flex-col gap-20 lg:gap-0 lg:flex-row justify-evenly ">
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-5">
             <div className="flex justify-center ">
               <Image
                 src="/images/icons/garanti.svg"
                 alt="Checkmark icon"
-                width={100}
-                height={100}
+                width={50}
+                height={50}
               />
             </div>
             <p className="mx-auto">Fornøydhetsgaranti</p>
           </div>
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-5">
             <div className="flex justify-center ">
               <Image
                 src="/images/icons/raskt.svg"
                 alt="Checkmark icon"
-                width={100}
-                height={100}
+                width={50}
+                height={50}
               />
             </div>
             <p className="mx-auto">Raskt, trygt og effektivt</p>
           </div>
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-5">
             <div className="flex justify-center ">
               <Image
                 src="/images/icons/miljø.svg"
                 alt="Checkmark icon"
-                width={100}
-                height={100}
+                width={50}
+                height={50}
               />
             </div>
             <p className="mx-auto">Miljøvennlig og kjemikalie fritt</p>

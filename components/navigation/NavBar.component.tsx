@@ -21,7 +21,6 @@ export default function NavBar({
   /* const { scrollYProgress } = useScroll(); */
 
   const controlNavbar = () => {
-    console.log(window.scrollY);
     if (window.scrollY < 10) {
       setShow(true);
     } else {

@@ -7,6 +7,7 @@ export default function SiteWrapperHome({
 }) {
   return (
     <div>
+      <div className="bg-white w-[80vw] mx-auto h-[2px]"></div>
       {children
         ? React.Children.map(children, (child) => {
             return (
