@@ -39,6 +39,13 @@ const Home: NextPage = () => {
     }
   };
 
+  useEffect(() => {
+    // how howInfoOpen should always be true if the others are false
+    if (!howInfoOpen && !pricesOpen && !faqOpen) {
+      setHowInfoOpen(true);
+    }
+  }, [howInfoOpen, pricesOpen, faqOpen]);
+
   return (
     <div className="">
       <Head>
