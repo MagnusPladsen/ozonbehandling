@@ -13,7 +13,6 @@ export default function NavBar({
   setdropdownOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const router = useRouter();
-  const active = "underline underline-offset-8 opacity-100";
 
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -112,11 +111,13 @@ export default function NavBar({
                   <Link href="/">
                     <motion.p
                       whileHover={{
-                        scale: 1.2,
+                        opacity: 1,
+                        textDecoration: "underline",
+                        textUnderlineOffset: "2px",
                       }}
                       transition={{ duration: 0.1 }}
-                      className={`hover:cursor-pointer  ${
-                        router.pathname === "/" ? active : ""
+                      className={`hover:cursor-pointer ${
+                        router.pathname === "/" ? "" : "opacity-50"
                       }`}
                     >
                       Hjem
@@ -125,11 +126,13 @@ export default function NavBar({
                   <Link href="/bedrift">
                     <motion.p
                       whileHover={{
-                        scale: 1.2,
+                        opacity: 1,
+                        textDecoration: "underline",
+                        textUnderlineOffset: "2px",
                       }}
                       transition={{ duration: 0.1 }}
                       className={`hover:cursor-pointer ${
-                        router.pathname === "/bedrift" ? active : ""
+                        router.pathname === "/bedrift" ? "" : "opacity-50"
                       }`}
                     >
                       Bedrift
@@ -138,11 +141,13 @@ export default function NavBar({
                   <Link href="/kontakt">
                     <motion.p
                       whileHover={{
-                        scale: 1.2,
+                        opacity: 1,
+                        textDecoration: "underline",
+                        textUnderlineOffset: "2px",
                       }}
                       transition={{ duration: 0.1 }}
                       className={`hover:cursor-pointer ${
-                        router.pathname === "/kontakt" ? active : ""
+                        router.pathname === "/kontakt" ? "" : "opacity-50"
                       }`}
                     >
                       Kontakt
@@ -151,11 +156,13 @@ export default function NavBar({
                   <Link href="/om-oss">
                     <motion.p
                       whileHover={{
-                        scale: 1.2,
+                        opacity: 1,
+                        textDecoration: "underline",
+                        textUnderlineOffset: "2px",
                       }}
                       transition={{ duration: 0.1 }}
                       className={`hover:cursor-pointer ${
-                        router.pathname === "/om-oss" ? active : ""
+                        router.pathname === "/om-oss" ? "" : "opacity-50"
                       }`}
                     >
                       Om oss
@@ -180,7 +187,7 @@ export default function NavBar({
                       <Link href="/">
                         <p
                           className={`py-10 ${
-                            router.pathname === "/" ? active : ""
+                            router.pathname === "/" ? "" : "opacity-50"
                           }`}
                         >
                           Hjem
@@ -189,7 +196,7 @@ export default function NavBar({
                       <Link href="/bedrift">
                         <div
                           className={`py-10  ${
-                            router.pathname === "/bedrift" ? active : ""
+                            router.pathname === "/bedrift" ? "" : "opacity-50"
                           }`}
                         >
                           Bedrift
@@ -198,7 +205,7 @@ export default function NavBar({
                       <Link href="/kontakt">
                         <p
                           className={`py-10 ${
-                            router.pathname === "/kontakt" ? active : ""
+                            router.pathname === "/kontakt" ? "" : "opacity-50"
                           }`}
                         >
                           Kontakt
@@ -207,7 +214,7 @@ export default function NavBar({
                       <Link href="/om-oss">
                         <p
                           className={`py-10 ${
-                            router.pathname === "/om-oss" ? active : ""
+                            router.pathname === "/om-oss" ? "" : "opacity-50"
                           }`}
                         >
                           Om oss

@@ -5,7 +5,7 @@ import CheckMarkIcon from "/public/images/icons/checkMark.png";
 export default function BulletInfoHorizontal() {
   return (
     <>
-      <div className="py-20 bg-primary text-white">
+      <div className="py-10 bg-primary text-white">
         <div className="flex flex-col gap-20 lg:gap-0 lg:flex-row justify-evenly ">
           <div className="flex flex-col gap-5">
             <div className="flex justify-center ">
